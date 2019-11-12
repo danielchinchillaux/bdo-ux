@@ -1,0 +1,54 @@
+include ../header.pug
+
+
+section.wizard-wrapper.lime-grd-light.grid-x
+	.cell.large-4.show-for-large.wizard-title
+		h1.h2.strong.text-right Calculadora de Cuotas:
+		h2.h3.strong.text-right Préstamo para Vehículos
+	.cell.small-12.medium-12.large-8.wizard-container.grid-x
+		.cell.wizard-header.grid-x
+			.cell.wizard-controls
+				a.back-arrow.button.bdo-link-btn(href="javascript:history.back()")
+					i.icon-arro-left
+			.cell.wizard-steps.grid-x
+				ul.cell.shrink.grid-x.grid-margin-x
+					li.cell.shrink: a.button.step.current(href="vehicular-s1.html") 1
+					li.cell.shrink: a.button.step.disabled(href="vehicular-s2.html") 2
+					li.cell.shrink: a.button.step.disabled(href="vehicular-s3.html") 3
+					li.cell.shrink: a.button.step.disabled(href="vehicular-s4.html") 4
+					li.cell.shrink: a.button.step.disabled(href="vehicular-s5.html") 5
+			
+			.cell.section-title
+				h2.text-center Préstamo para Vehículos
+				.cell.wizard-bubble.flex-container.align-center
+					.bubble.lift-up
+						i.icon-car-3.leaf
+		
+		
+		.cell.wizard-block.padded.grid-x.align-center.margin-t4x
+			.cell.small-12.medium-8
+				.cell.text-center
+					span.wizard-label El vehículo que quiero es:
+				.cell.shrink.button-group.bdo.wizard-switcher.flex-container.align-center
+					button.button.bdo-white-btn.large.is-green-active Nuevo
+					button.button.bdo-white-btn.large Usado 
+
+
+		.cell.wizard-block.padded.flex-container.align-center
+			a.button.bdo-green-btn.wizard-action(href="vehicular-s2.html")
+				i.icon-arrow-right
+		
+		include ../blocks/need-help-wizard.pug
+						
+
+
+
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/valle.jpg", alt="Valle")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Apoyando al pequeño de hoy, hacemos el grande del mañana.
+		a.button.bdo-orange-btn.large(href="page.html" title="Conozca Nuestra Historia") Nuestra Historia		
+
+include ../footer.pug

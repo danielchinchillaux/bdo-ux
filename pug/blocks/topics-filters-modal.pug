@@ -1,0 +1,33 @@
+.reveal#bdo-topics-filters-modal.bdo-modal.filters(data-reveal data-animation-in="slide-in-down fade-out")
+	.cell.grid-y.grid-margin-y
+		.cell.modal-title.text-center
+			span.h3.strong.minus-tracking-x2 
+				strong Filtrar por:
+
+		.cell.modal-content-block.text-center
+			form.bdo.filters-modal
+				.cell
+					ul.accordion.text-left(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+						li.accordion-item.is-active(data-accordion-item)
+							a.accordion-title(href="#") Temas
+							.accordion-content(data-tab-content)
+								fieldset
+									ul
+										li
+											input#topic1.checkbox-large(type='checkbox')
+											label(for='topic1') Compras (1)
+										li
+											input#topic2.checkbox-large(type='checkbox')
+											label(for='topic2') Ahorros (2)
+										li
+											input#topic3.checkbox-large(type='checkbox')
+											label(for='topic3') Tarjetas (4)
+										li
+											input#topic3.checkbox-large(type='checkbox')
+											label(for='topic3') Préstamos (3)
+				.cell
+					button.button.bdo-green-btn.large.expanded Aplicar
+		
+			
+	button.close-button(data-close='', aria-label='Close modal', type='button')
+		span(aria-hidden='true') ×

@@ -1,0 +1,46 @@
+.reveal#bdo-property-filters-modal.bdo-modal.filters(data-reveal data-animation-in="slide-in-down fade-out")
+	.cell.grid-y.grid-margin-y
+		.cell.modal-title.text-center
+			span.h3.strong.minus-tracking-x2 
+				strong Filtrar por:
+
+		.cell.modal-content-block.text-center
+			form.bdo.filters-modal
+				.cell.select-icon-hack
+					i.icon-map-pin.ghost-moss.before
+					i.icon-chevron-down.ghost-moss.after
+					select#region-dropdown(name='region').region-dropdown
+						option(value='') Comayagua (14)
+						option(value='Atlantida') Atlántida (8)
+						option(value='Choluteca') Choluteca (9)
+						option(value='Cortes') Cortés (17)
+						option(value='Colon') Colón (10)
+						option(value='Comayagua') Comayagua (14)
+						option(value='ElParaiso') El Paraíso (6)
+						option(value='FranciscoMorazan') Francisco Morazán (24)
+						option(value='...') ... (11)
+				.cell
+					ul.accordion.text-left(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+						li.accordion-item.is-active(data-accordion-item)
+							a.accordion-title(href="#") Precio
+							.accordion-content(data-tab-content)
+								fieldset
+									ul
+										li
+											input#price1.checkbox-large(type='checkbox')
+											label(for='price1') Más de L500,000 (1)
+										li
+											input#price2.checkbox-large(type='checkbox' checked)
+											label(for='price2') L250,000 - 500,000 (8)
+										li
+											input#price3.checkbox-large(type='checkbox' checked)
+											label(for='price3') L180,000 - 250,000 (4)
+										li
+											input#price4.checkbox-large(type='checkbox')
+											label(for='price4') Menos de L180,000 (1)
+				.cell
+					button.button.bdo-green-btn.large.expanded Aplicar
+		
+			
+	button.close-button(data-close='', aria-label='Close modal', type='button')
+		span(aria-hidden='true') ×

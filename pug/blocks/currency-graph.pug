@@ -1,0 +1,145 @@
+.reveal#bdo-currency-graph.bdo-modal(data-reveal data-animation-in="slide-in-up fade-out")
+	.cell.grid-y.grid-margin-y
+		.nav-switcher.cell.shrink.grid-x.align-center
+			ul.tabs.bdo-switcher-tabs.grid-x.align-center(data-tabs)#currency-graph-switcher
+				li.tabs-title.is-active.cell.shrink
+					a(href="#graph-dollar-1", aria-selected="true") $ Dólar
+				li.tabs-title.cell.shrink
+					a(href="#graph-euro-2", data-tabs-target="graph-euro-2") € Euro
+		.cell.menus-content.tabs-content.bdo.shrink(data-tabs-content="currency-graph-switcher")
+			.tabs-panel.is-active#graph-dollar-1
+				.cell.grid-x
+					.cell.modal-title.text-center
+						span.h3.strong.minus-tracking-x2 Precio del Dólar
+					.cell.modal-content-block
+						img(src="img/graph-dollar.svg", style="margin: 1rem auto; width: 100%; display: block;")
+						small.pale-moss(style="padding: 1rem 0; display:block;") Esta gráfica sólo es una 
+							code img
+							|  para efectos de demo. Es mejor partir de una librería de gráficas que sea práctica para los developers y luego estilizar esta.
+					.cell.modal-content-block.grid-x
+						.cell.history-headers.grid-x.grid-margin-x
+							.cell.small-6.text-right
+								span.caps-label Fecha
+							.cell.small-3
+								span.caps-label Venta
+							.cell.small-3
+								span.caps-label Compra
+
+						.cell.history-values.today.grid-x.grid-margin-x
+							.cell.small-6.text-right.leaf
+								span.date Hoy
+							.cell.small-3.leaf
+								span L 
+									strong 24.79
+									| 21
+							.cell.small-3.leaf
+								span L 
+									strong 24.62
+									| 56
+						
+						.cell.history-values.one-month.grid-x.grid-margin-x.pale-moss
+							.cell.small-6.text-right
+								span.date Hace 1 mes
+							.cell.small-3
+								span L 
+									strong 24.72
+									| 11
+							.cell.small-3
+								span L 
+									strong 24.62
+									| 56
+						.cell.history-values.six-months.grid-x.grid-margin-x.pale-moss
+							.cell.small-6.text-right
+								span.date Hace 6 meses
+							.cell.small-3
+								span L 
+									strong 24.64
+									| 98
+							.cell.small-3
+								span L 
+									strong 24.58
+									| 04
+						.cell.history-values.last-year.grid-x.grid-margin-x.pale-moss
+							.cell.small-6.text-right
+								span.date Hace 1 año
+							.cell.small-3
+								span L 
+									strong 24.40
+									| 88
+							.cell.small-3
+								span L 
+									strong 24.27
+									| 65
+			
+			.tabs-panel#graph-euro-2
+				.cell.grid-x
+					.cell.modal-title.text-center
+						span.h3.strong.minus-tracking-x2 Precio del Euro
+					.cell.modal-content-block
+						img(src="img/graph-euro.svg", style="margin: 1rem auto; width: 100%; display: block;")
+						small.pale-moss(style="padding: 1rem 0; display:block;") Esta gráfica sólo es una 
+							code img
+							|  para efectos de demo. Es mejor partir de una librería de gráficas que sea práctica para los developers y luego estilizar esta.
+					.cell.modal-content-block.grid-x.grid-margin-y
+						.cell.history-headers.grid-x.grid-margin-x
+							.cell.small-6.text-right
+								span.caps-label Fecha
+							.cell.small-3
+								span.caps-label Venta
+							.cell.small-3
+								span.caps-label Compra
+
+						.cell.history-values.today.grid-x.grid-margin-x
+							.cell.small-6.text-right.leaf
+								span.date Hoy
+							.cell.small-3.leaf
+								span L 
+									strong 28.45
+									| 21
+							.cell.small-3.leaf
+								span L 
+									strong 26.72
+									| 98
+						
+						.cell.history-values.one-month.grid-x.grid-margin-x.pale-moss
+							.cell.small-6.text-right
+								span.date Hace 1 mes
+							.cell.small-3
+								span L 
+									strong 28.40
+									| 11
+							.cell.small-3
+								span L 
+									strong 26.68
+									| 42
+						.cell.history-values.six-months.grid-x.grid-margin-x.pale-moss
+							.cell.small-6.text-right
+								span.date Hace 6 meses
+							.cell.small-3
+								span L 
+									strong 28.10
+									| 18
+							.cell.small-3
+								span L 
+									strong 26.87
+									| 25
+						.cell.history-values.last-year.grid-x.grid-margin-x.pale-moss
+							.cell.small-6.text-right
+								span.date Hace 1 año
+							.cell.small-3
+								span L 
+									strong 27.69
+									| 63
+							.cell.small-3
+								span L 
+									strong 25.76
+									| 57
+
+
+
+		
+		
+		
+			
+	button.close-button(data-close='', aria-label='Close modal', type='button')
+		span(aria-hidden='true') ×

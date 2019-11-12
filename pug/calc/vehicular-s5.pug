@@ -1,0 +1,108 @@
+include ../header.pug
+
+
+section.wizard-wrapper.lime-grd-light.grid-x
+	.cell.large-4.show-for-large.wizard-title
+		h1.h2.strong.text-right Calculadora de Cuotas:
+		h2.h3.strong.text-right Préstamo para Vehículos
+	.cell.small-12.medium-12.large-8.wizard-container.grid-x
+		.cell.wizard-header.grid-x
+			.cell.wizard-controls
+				a.back-arrow.button.bdo-link-btn(href="javascript:history.back()")
+					i.icon-arro-left
+			.cell.wizard-steps.grid-x
+				ul.cell.shrink.grid-x.grid-margin-x
+					li.cell.shrink: a.button.step.done(href="vehicular-s1.html") 1
+					li.cell.shrink: a.button.step.done(href="vehicular-s2.html") 2
+					li.cell.shrink: a.button.step.done(href="vehicular-s3.html") 3
+					li.cell.shrink: a.button.step.done(href="vehicular-s4.html") 4
+					li.cell.shrink: a.button.step.current(href="vehicular-s5.html") 5
+			
+			.cell.section-title
+				h2.text-center ¡Hablemos!
+				.cell.wizard-bubble.flex-container.align-center
+					.bubble.lift-up
+						i.icon-meeting.leaf
+			
+		.cell.wizard-block.wizard-callout.padded.bubble-padd.text-center.lime-grd.margin-b3x
+			p.strong Contáctese con un agente de Banco de Occidente como usted prefiera:
+
+		
+		.cell.wizard-block.wizard-actions.padded.grid-x.align-center
+			.cell.small-12.medium-8.grid-x.grid-margin-y
+				a.cell.bdo-card.hz-icon-card.grid-x.small-12(href="#")
+					.card-title-overlay.cell.small-9.flex-container.align-bottom
+						span.card-title.small Que un agente me llame
+					.hz-icon-overlay.cell.small-3.flex-container.align-middle
+						img(src="img/icons/call-bubble.svg", alt="Llamar")
+				
+				a.cell.bdo-card.hz-icon-card.grid-x.small-12(target="_blank" href="agencias.html")
+					.card-title-overlay.cell.small-9.flex-container.align-bottom
+						h3.card-title.small Visite una Agencia
+					.hz-icon-overlay.cell.small-3.flex-container.align-middle
+						img(src="img/icons/map-pin.svg", alt="Pin")
+				
+				a.cell.bdo-card.hz-icon-card.grid-x.small-12(data-open="bdo-call")
+					.card-title-overlay.cell.small-9.flex-container.align-bottom
+						span.card-title.small Llamar al Call Center
+					.hz-icon-overlay.cell.small-3.flex-container.align-middle
+						img(src="img/icons/call-bubble.svg", alt="Llamar")
+
+
+		.cell.wizard-block.wizard-summary.padded.grid-x.align-center
+			.cell.small-12.medium-8.grid-x.grid-margin-y
+				.cell.grid-x.grid-padding-x.align-justify
+					.cell.shrink
+						span.key-label Vehículo Nuevo
+					.cell.shrink
+						span.key-label Ingresos: 29,000
+				.cell.grid-x.grid-padding-x
+					.cell.auto
+						span.key-value.leaf.strong L9,400.92
+						span.key-label.forest Cuota Mensual
+					
+					.cell.shrink.text-center
+						span.key-value.strong 12%
+						span.key-label.pale-moss Interés
+
+					.cell.shrink.text-center
+						span.key-value.strong 6
+						span.key-label.pale-moss Años
+					
+				.cell.grid-x.grid-padding-x
+					
+					.cell.shrink
+						span.key-value.strong 10%
+						span.key-label.pale-moss Prima
+					
+					.cell.auto
+						span.key-value.strong L478,000
+						span.key-label.pale-moss Valor a Financiar
+
+		.cell.wizard-block.padded.grid-x.align-center.margin-t3x
+			.bubble-note.cell.small-12.medium-8.grid-x.align-middle
+				.cell.shrink
+					.icon-bubble
+						i.icon-certificate.leaf
+				.cell.auto.padding-l3x
+					span.title Gastos Adicionales
+			.cell.small-12.medium-8
+				p.mid-moss Considere también: gastos legales y administrativos, seguro de vida, seguro de vehículo, monitoreo vía GPS (incluido).						
+
+		.cell.wizard-block.padded.text-center.grid-x
+			.cell
+				a.button.bdo-white-btn.large(href="prestamo-page.html" target="_blank") Ver Requisitos
+			.cell
+				a.button.bdo-orange-btn.large(href="calc-save-results.html") Guardar Resultado
+
+		include ../blocks/need-help-wizard.pug
+
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/valle.jpg", alt="Valle")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Apoyando al pequeño de hoy, hacemos el grande del mañana.
+		a.button.bdo-orange-btn.large(href="page.html" title="Conozca Nuestra Historia") Nuestra Historia		
+
+include ../footer.pug

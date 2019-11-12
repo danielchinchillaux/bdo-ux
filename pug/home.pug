@@ -1,0 +1,379 @@
+include header.pug
+
+//- DASHBOARD
+section.bdo-dashboard.grid-x.align-center
+	.cell.slider-column.small-12.large-5.small-order-2.large-order-1
+		include components/slider-home.pug
+	.cell.shortcuts-column-dsk.grid-x.grid-margin-x.grid-margin-y.large-7.show-for-large.large-order-2
+		//- a.cell.bdo-card.hz-icon-card.grid-x.small-6.height-160
+		//- 	.card-title-overlay.cell.small-8.flex-container.align-bottom
+		//- 		h3.card-title TDC
+		//- 	.hz-icon-overlay.cell.small-4.flex-container.align-middle
+		.cell.small-6
+			include components/currency-widget.pug		
+		
+		a.cell.bdo-card.hz-icon-card.login-card.grid-x.small-6(data-open="banking-login").height-160
+			.card-title-overlay.cell.small-8.flex-container.align-bottom
+				h3.card-title Banca Digital
+			.hz-icon-overlay.cell.small-4.flex-container.align-middle
+				img(src="img/bdo-icon.svg", alt="Insignia Banco de Occidente")
+
+		a.cell.bdo-card.hz-icon-card.grid-x.small-6(href="agencias.html").height-160
+			.card-title-overlay.cell.small-8.flex-container.align-bottom
+				h3.card-title Agencias y Horarios
+			.hz-icon-overlay.cell.small-4.flex-container.align-middle
+				img(src="img/icons/map-pin.svg", alt="Mapa Pin")
+		
+		a.cell.bdo-card.hz-icon-card.grid-x.small-6(data-open="bdo-call").height-160
+			.card-title-overlay.cell.small-8.flex-container.align-bottom
+				h3.card-title Call Center
+			.hz-icon-overlay.cell.small-4.flex-container.align-middle
+				img(src="img/icons/call-bubble.svg", alt="Call Center")
+		
+		a.cell.bdo-card.hz-icon-card.grid-x.small-6(href="propiedades-landing.html").height-160
+			span.card-tag.sunset-grd Nuevo
+			.card-title-overlay.cell.small-8.flex-container.align-bottom
+				h3.card-title Propiedades en Venta
+			.hz-icon-overlay.cell.small-4.flex-container.align-middle
+				img(src="img/icons/propiedades.svg", alt="Propiedades en Venta")
+		
+		a.cell.bdo-card.hz-icon-card.grid-x.small-6(href="#").height-160
+			span.card-tag.sunset-grd Nueva
+			.card-title-overlay.cell.small-8.flex-container.align-bottom
+				h3.card-title Calculadora de Cuotas
+			.hz-icon-overlay.cell.small-4.flex-container.align-middle
+				img(src="img/icons/calculadora.svg", alt="Calculadora")
+
+	.cell.shortcuts-column-mob.grid-x.grid-margin-x.grid-margin-y.small-12.hide-for-large.small-order-1
+		.bdo-currency-widget.cell.grid-x
+			.cell.widget-controls.grid-x
+				.cell.currency-selector.shrink
+					.button-group.bdo
+						button.button.large.bdo-white-btn.is-green-active $
+						button.button.large.bdo-white-btn €
+				.cell.operator-selector.auto
+					ul.tabs.bdo-switcher-tabs.classic-tabs.grid-x.align-center(data-tabs)#currency-widget-switcher-mob
+						li.tabs-title.is-active.cell.small-4
+							a(href="#exchange-1-mob" data-tabs-target="exchange-1-mob" ) Tasa
+						li.tabs-title.cell.small-8
+							a(href="#converter-2-mob" aria-selected="true" ) Convertidor
+			
+			.cell.menus-content.tabs-content.bdo(data-tabs-content="currency-widget-switcher-mob")
+				.tabs-panel.is-active#exchange-1-mob
+					.cell.currency-content.grid-x.align-middle
+						.cell.currency-block.grid-y.auto
+							.cell.title.shrink.trunk-ellipsis
+								span.caps-label Venta
+							.cell.price.shrink.trunk-ellipsis
+								span.forest
+									strong L 
+									strong 24.72
+									span 09
+							.cell.trend
+								span.pale-moss
+									i.icon-arrow-up.margin-r1x
+									| 0.1429
+						.cell.currency-block.grid-y.auto
+							.cell.title.shrink.trunk-ellipsis
+								span.caps-label Compra
+							.cell.price.shrink.trunk-ellipsis
+								span.forest
+									strong L 
+									strong 24.59
+									span 46
+							.cell.trend
+								span.pale-moss
+									i.icon-arrow-up.margin-r1x
+									| 0.2078
+						.cell.graph-trigger.shrink
+							button.button.has-tip.bottom(data-open="bdo-currency-graph" data-tooltip='', tabindex='2', title='Historial del Precio del Dólar/Euro')
+								i.icon-trend
+				.tabs-panel#converter-2-mob
+					form.bdo.currency-converter.grid-x.align-center.align-middle
+						.cell.form-block.currency-amount-wrapper.small-5
+							span.currency-input-indicator $
+							input.gray-inpt(type="number" placeholder="5420" inputmode="numeric" id="currency-amount" step="10")
+						.cell.currency-converter-toggle.small-2.text-center
+							button.button.bdo-ghost-btn.circle
+								i.icon-transfer-9.strong
+						.cell.converter-result.small-5.flex-container.align-middle.align-center
+							span.ghost-moss.padding-r1x L
+							span.moss 123,456.78
+
+		a.cell.bdo-card.hz-icon-card.grid-x.small-12(href="agencias.html")
+			.card-title-overlay.cell.small-6.flex-container.align-bottom
+				h3.card-title Agencias y Horarios
+			.hz-icon-overlay.cell.small-6.flex-container.align-middle
+				img(src="img/icons/map-pin.svg", alt="Agencias y Horarios")
+		a.cell.bdo-card.hz-icon-card.grid-x.small-12(data-open="bdo-call")
+			.card-title-overlay.cell.small-6.flex-container.align-bottom
+				h3.card-title Call Center
+			.hz-icon-overlay.cell.small-6.flex-container.align-middle
+				img(src="img/icons/call-bubble.svg", alt="Call Center")
+		a.cell.bdo-card.hz-icon-card.grid-x.small-12(href="propiedades-landing.html")
+			.card-title-overlay.cell.small-6.flex-container.align-bottom
+				h3.card-title Propiedades en Venta
+			.hz-icon-overlay.cell.small-6.flex-container.align-middle
+				img(src="img/icons/propiedades.svg", alt="Propiedades en Venta")
+		a.cell.bdo-card.hz-icon-card.grid-x.small-12(href="#")
+			.card-title-overlay.cell.small-6.flex-container.align-bottom
+				h3.card-title Calculadora de Cuotas
+			.hz-icon-overlay.cell.small-6.flex-container.align-middle
+				img(src="img/icons/calculadora.svg", alt="Calculadora de Cuotas")
+
+section
+	.bdo-title-divider.faux-grd.flex-container.align-middle
+		h2.title ¿Qué deseas lograr hoy?
+		.cell.shrink.flex-container.align-center.swipe-me.hide-for-large
+			i.icon-swipe-hz.pale-moss
+		img.donut-deco(src="img/full-donut-sunset.svg", alt="")
+	.actions-row
+		.tiles-carousel.cell.grid-x.grid-margin-x.align-left.hz-scroller(data-equalizer)
+			a.cell.small-7.medium-3.large-3.bdo-card.vt-icon-card.grid-y.height-320
+				.vt-icon-overlay.cell.auto
+					//- i.icon-piggy
+					img(src="img/icons/piggy-bank.svg", alt="")
+				.card-title-overlay.cell.shrink
+					h3.card-title Ahorrar
+			a.cell.small-7.medium-3.large-3.bdo-card.vt-icon-card.grid-y.height-320
+				.vt-icon-overlay.cell.auto
+					//- i.icon-credit-card
+					img(src="img/icons/credit-card.svg", alt="")
+				.card-title-overlay.cell.shrink
+					h3.card-title Comprar
+			a.cell.small-7.medium-3.large-3.bdo-card.vt-icon-card.grid-y.height-320
+				.vt-icon-overlay.cell.auto
+					//- i.icon-coins-hand
+					img(src="img/icons/coins-hand.svg", alt="")
+				.card-title-overlay.cell.shrink
+					h3.card-title Préstamos
+			a.cell.small-7.medium-3.large-3.bdo-card.vt-icon-card.grid-y.height-320
+				.vt-icon-overlay.cell.auto
+					//- i.icon-bank-transfer
+					img(src="img/icons/money-transfer.svg", alt="")
+				.card-title-overlay.cell.shrink
+					h3.card-title Transferir
+		
+
+
+
+section
+	.bdo-title-divider.faux-grd.flex-container.align-middle
+		h2.title Descubre tu nuevo Banco de Occidente
+		img.donut-deco(src="img/full-donut-lime.svg", alt="")
+
+section.product-row.grid-x
+	
+	.cell.auto
+		h2.product-row-title Vehículos
+	.cell.shrink.swipe-me
+		i.icon-swipe-hz.pale-moss
+	
+	.tiles-carousel.cell.grid-x.grid-margin-x.align-left.hz-scroller(data-equalizer)
+		a.cell.small-7.medium-4.large-3.bdo-card.vt-icon-card.grid-y.height-320
+			.vt-icon-overlay.cell.auto.padding-t3x
+				img(src="img/icons/car-3.svg", alt="Vehículo Ícono")
+				//- i.icon-car-3
+			.card-title-overlay.cell.shrink
+				h3.card-title Préstamos Vehiculares
+		
+		a.cell.small-7.medium-4.large-3.bdo-card.photo-card(data-equalizer-watch)
+			.card-title-overlay
+				h3.card-title Vehículos en Venta
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+		
+		a.cell.small-7.medium-4.large-3.bdo-card.photo-card(data-equalizer-watch)
+			.card-title-overlay
+				h3.card-title ¿Nuevo o usado? ¿Qué me conviene?
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+		
+
+		.dual-tiles.cell.small-7.medium-4.large-3.grid-y.align-justify(data-equalizer-watch)
+			a.cell.bdo-card.hz-icon-card.grid-x
+				span.card-tag.sunset-grd Nuevo
+				.card-title-overlay.cell.small-8.flex-container.align-bottom
+					h3.card-title Seguro de Accidentes
+				.hz-icon-overlay.cell.small-4.flex-container.align-middle
+					img(src="img/icons/accident.svg", alt="Accidente")
+					//- i.icon-injury
+			a.cell.bdo-card.hz-icon-card.grid-x
+				.card-title-overlay.cell.small-8.flex-container.align-bottom
+					h3.card-title Pago de Matrícula
+				.hz-icon-overlay.cell.small-4.flex-container.align-middle
+					img(src="img/icons/car-plate.svg", alt="Matrícula")
+					//- i.icon-car-plate
+		
+
+
+section.product-row.grid-x.align-justify
+	.cell.auto
+		h2.product-row-title Viajes y Estudios
+	.cell.shrink.swipe-me
+		i.icon-swipe-hz.pale-moss
+
+	.tiles-carousel.cell.grid-x.grid-margin-x.align-left.hz-scroller(data-equalizer)
+		a.cell.small-7.medium-4.large-3.bdo-card.photo-card.height-320
+			.card-title-overlay
+				h3.card-title Logra tus estudios con un Préstamo Personal
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+				
+		.dual-tiles.cell.small-7.medium-4.large-3.grid-y.align-justify(data-equalizer-watch)
+			a.cell.bdo-card.hz-icon-card.grid-x
+				.card-title-overlay.cell.small-8.flex-container.align-bottom
+					h3.card-title ¿Cómo hacer Transferencias Internacionales?
+				.hz-icon-overlay.cell.small-4.flex-container.align-middle
+					img(src="img/icons/bank-transfers.svg", alt="")
+			
+			a.cell.bdo-card.hz-icon-card.grid-x
+				.card-title-overlay.cell.small-8.flex-container.align-bottom
+					h3.card-title Cita para Pasaporte
+				.hz-icon-overlay.cell.small-4.flex-container.align-middle
+					img(src="img/icons/passport.svg", alt="Pasaporte")
+		
+		.dual-tiles.cell.small-7.medium-4.large-3.grid-y.align-justify(data-equalizer-watch)
+			a.cell.bdo-card.photo-card.small-6
+				.card-title-overlay
+					h3.card-title Tarjeta Clásica Internacional
+				.card-poster
+					img(src="img/stocks/generic-thumb.jpg", alt="")
+			
+			a.cell.bdo-card.hz-icon-card.grid-x.small-6
+				.card-title-overlay.cell.small-8.flex-container.align-bottom
+					h3.card-title Seguro de Tarjetas
+				.hz-icon-overlay.cell.small-4.flex-container.align-middle
+					img(src="img/icons/tarjeta.svg", alt="")
+		
+		a.cell.small-7.medium-4.large-3.bdo-card.photo-card(data-equalizer-watch)
+			.card-title-overlay
+				h3.card-title Seguro de Vida
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+
+section.product-row.grid-x
+	.cell.auto
+		h2.product-row-title Vivienda
+	.cell.shrink.swipe-me
+		i.icon-swipe-hz.pale-moss
+	
+	.tiles-carousel.cell.grid-x.grid-margin-x.align-left.hz-scroller(data-equalizer)
+		a.cell.small-8.medium-4.large-3.height-320.bdo-card.vt-icon-card.grid-y
+			.vt-icon-overlay.cell.auto
+				img(src="img/icons/houses.svg", alt="")
+			.card-title-overlay.cell.shrink
+				h3.card-title Préstamos para Vivienda
+		
+		a.cell.small-8.medium-4.large-3.bdo-card.photo-card(data-equalizer-watch)
+			.card-title-overlay
+				h3.card-title Casas en Venta
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+		
+		a.cell.small-8.medium-5.large-3.bdo-card.photo-card(data-equalizer-watch)
+			.card-title-overlay
+				h3.card-title ¿Comprar o alquilar? ¿Qué me conviene?
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+		
+		a.cell.small-6.medium-4.large-3.bdo-card.photo-card(data-equalizer-watch)
+			.card-title-overlay
+				h3.card-title Terrenos en Venta
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+		
+
+section.product-row.grid-x.align-justify
+	.cell.auto
+		h2.product-row-title Pagar Fácil
+	.cell.shrink.swipe-me
+		i.icon-swipe-hz.pale-moss
+
+	.tiles-carousel.cell.grid-x.grid-margin-x.align-left.hz-scroller(data-equalizer)
+		a.cell.small-7.medium-4.large-3.bdo-card.photo-card.height-320
+			.card-title-overlay
+				h3.card-title Préstamo Personal
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+				
+		.dual-tiles.cell.small-7.medium-4.large-3.grid-y.align-justify(data-equalizer-watch)
+			a.cell.bdo-card.hz-icon-card.grid-x
+				.card-title-overlay.cell.small-8.flex-container.align-bottom
+					h3.card-title Pago de Agua
+				.hz-icon-overlay.cell.small-4.flex-container.align-middle
+					img(src="img/icons/faucet.svg", alt="Llave Agua")
+			
+			a.cell.bdo-card.hz-icon-card.grid-x
+				.card-title-overlay.cell.small-8.flex-container.align-bottom
+					h3.card-title Pago de ENEE
+				.hz-icon-overlay.cell.small-4.flex-container.align-middle
+					img(src="img/icons/bulb.svg", alt="Bombillo")
+		
+		.dual-tiles.cell.small-7.medium-4.large-3.grid-y.align-justify(data-equalizer-watch)
+			a.cell.bdo-card.hz-icon-card.grid-x
+				.card-title-overlay.cell.small-8.flex-container.align-bottom
+					h3.card-title Pago de Hondutel
+				.hz-icon-overlay.cell.small-4.flex-container.align-middle
+					img(src="img/icons/phone.svg", alt="Teléfono")
+			
+			a.cell.bdo-card.hz-icon-card.grid-x.small-6
+				.card-title-overlay.cell.small-8.flex-container.align-bottom
+					h3.card-title Impuestos y Servicios
+				.hz-icon-overlay.cell.small-4.flex-container.align-middle
+					img(src="img/icons/taxes.svg", alt="Impuestos")
+		
+		a.cell.small-7.medium-4.large-3.bdo-card.photo-card(data-equalizer-watch)
+			.card-title-overlay
+				h3.card-title Cita para Pasaporte
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg" alt="")
+
+			
+section.product-row.grid-x.align-justify
+	.cell.auto
+		h2.product-row-title Promociones y Tarjetas
+	.cell.shrink.swipe-me
+		i.icon-swipe-hz.pale-moss
+
+	.tiles-carousel.cell.grid-x.grid-margin-x.align-left.hz-scroller(data-equalizer)
+		a.cell.small-7.medium-4.large-3.bdo-card.photo-card.height-320
+			.card-title-overlay
+				h3.card-title Canjea tus MayaPuntos por Efectivo
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+		
+		a.cell.small-7.medium-4.large-3.bdo-card.photo-card.height-320
+			.card-title-overlay
+				h3.card-title Descuentos de Semana Santa 2019
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+
+		a.cell.small-7.medium-4.large-3.bdo-card.photo-card.height-320
+			.card-title-overlay
+				h3.card-title Acumula Puntos y Viaja con LifeMiles
+			.card-poster
+				img(src="img/stocks/generic-thumb.jpg", alt="")
+		
+		.dual-tiles.cell.small-7.medium-4.large-3.grid-y.align-justify(data-equalizer-watch)
+			a.cell.bdo-card.photo-card.small-6
+				.card-title-overlay
+					h3.card-title Tarjeta Clásica Internacional
+				.card-poster
+					img(src="img/stocks/generic-thumb.jpg", alt="")
+			
+			a.cell.bdo-card.photo-card.small-6
+				.card-title-overlay
+					h3.card-title Tarjeta Clásica Regional
+				.card-poster
+					img(src="img/stocks/generic-thumb.jpg", alt="")
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/valle.jpg", alt="Valle")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Apoyando al pequeño de hoy, hacemos el grande del mañana.
+		a.button.bdo-orange-btn.large(href="page.html" title="Conozca Nuestra Historia") Nuestra Historia
+		
+
+include footer.pug

@@ -1,0 +1,36 @@
+.reveal.bdo-login#banking-login(data-reveal data-animation-in="slide-in-up fade-out" data-v-offset="16")
+	button.close-button(data-close='', aria-label='Close modal', type='button')
+		span(aria-hidden='true') ×
+	.cell.grid-y
+		.login-banner.cell.grid-y.grid-padding-x.sunset-grd
+			.cell.flex-container.flex-dir-column.align-middle.align-center
+				i.icon-bdo-isologo-color.banking-logo
+				h2 Banca Digital
+		form.login-content.cell.grid-x.grid-margin-y
+			.cell.login-block.username
+				label.username(for="username") Usuario
+				input(type="text" inputmode="password" placeholder="Usuario" id="username")
+				.cell.login-helpers.grid-x.align-justify
+					.cell.shrink
+						a(href="#") Olvidé mi usuario
+					.cell.shrink
+						a(href="#") Solicitar usuario
+			.cell.login-block.passcode
+				label(for="passcode") PIN + Token
+				input.passcode(type="password" placeholder="1234token")
+				.cell.login-helpers.grid-x.align-justify
+					.cell.shrink
+						a(href="#") Olvidé mi PIN
+					.cell.shrink
+						a(href="#") ¿Token bloqueado?
+			.cell.login-block.action.text-center
+				input.button.bdo-green-btn.large.expanded(type="submit", value="Ingresar")
+			.cell.login-block.help
+				.cell.login-helpers.text-center
+					a(href="") Acabo de recibir mi usuario y quiero ingresar por primera vez
+		.cell.download-apps
+			ul.cell.grid-x.grid-margin-y.align-center
+				li.cell.shrink: a.hover-up(href="#" title="Descargar en Google Play" target="_blank")
+					img(src="img/google-play.png", alt="Descargar en Google Play")
+				li.cell.shrink: a.hover-up(href="#" title="Descargar en la App Store" target="_blank")
+					img(src="img/app-store.png", alt="Descargar en la App Store")

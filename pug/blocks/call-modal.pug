@@ -1,0 +1,53 @@
+.reveal#bdo-call.bdo-modal.no-padd-bottom(data-reveal data-animation-in="slide-in-up fade-out")
+	.cell.grid-y.grid-margin-y
+		.cell.modal-title.text-center
+			span.h3.strong.minus-tracking-x2 
+				strong Call Center:
+				br 
+				| Horarios de Atención
+		.cell.modal-content-block.text-center
+			p 
+				strong Lun - Vie: 
+				| 8:00am - 7:00pm
+			p 
+				strong Sábados: 
+				| 8:00am - 5:00pm 
+				
+		.cell.modal-content-block
+			.cell.grid-y.grid-margin-y.grid-margin-y
+				a.cell.bdo-card.call-card.grid-x(href="tel:+50422279000")
+					.card-title-overlay.cell.small-9.flex-container.flex-dir-column
+						span.card-subtitle.pale-moss Tegucigalpa
+						span.card-title 2227-9000
+					.call-icon-overlay.lime-grd.cell.small-3.flex-container.align-middle.align-center
+						i.icon-call.white98
+			
+				a.cell.bdo-card.call-card.grid-x(href="tel:+5042545-000")
+					.card-title-overlay.cell.small-9.flex-container.flex-dir-column
+						span.card-subtitle.pale-moss San Pedro Sula
+						span.card-title 2545-7000
+					.call-icon-overlay.lime-grd.cell.small-3.flex-container.align-middle.align-center
+						i.icon-call.white98
+
+				.cell
+					a(href="#" target="_blank").cell.button.bdo-link-btn.is-active.text-left
+						i.icon-help.ghost-moss.margin-r1x
+						span Preguntas Frecuentes
+
+				//- a.bdo-card.simple-card(href="#")
+				//- 	.card-title-overlay
+				//- 		i.icon-help.ghost-moss.margin-r1x
+				//- 		span.card-title Preguntas Frecuentes
+		.cell.modal-content-block.social-and-apps
+			ul.grid-x.grid-margin-x.align-center
+				li.shrink: a(href="#" target="_blank" title="Facebook") 
+					i.icon-facebook
+				li.shrink: a(href="#" target="_blank" title="Messenger") 
+					i.icon-messenger
+				li.shrink: a(href="#" target="_blank" title="Whatsapp") 
+					i.icon-whatsapp
+	.cell.flex-container.align-center.donut-deco
+		img(src="img/half-donut-lime.svg", alt="Insignia Banco de Occidente Verde")
+			
+	button.close-button(data-close='', aria-label='Close modal', type='button')
+		span(aria-hidden='true') ×

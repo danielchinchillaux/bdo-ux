@@ -1,0 +1,48 @@
+include ../header.pug
+
+
+section.wizard-wrapper.lime-grd-light.grid-x
+	.cell.large-4.show-for-large.wizard-title
+		h1.h2.strong.text-right Calculadora de Cuotas:
+		h2.h3.strong.text-right Préstamo para Vehículos
+	.cell.small-12.medium-12.large-8.wizard-container.grid-x
+		.cell.wizard-header.grid-x
+			.cell.wizard-controls
+				a.back-arrow.button.bdo-link-btn(href="javascript:history.back()")
+					i.icon-arro-left
+			
+			
+			.cell.section-title
+				h2.text-center Solicitud de Contacto
+				.cell.wizard-bubble.flex-container.align-center
+					.bubble.lift-up
+						i.icon-paper-plane.leaf
+
+		.cell.wizard-block.padded.bubble-padd.margin-t3x.grid-x.align-center
+			form.bdo.leads-form.cell.small-12.medium-8.grid-x.grid-margin-y
+				.cell.form-block.username
+					label.username(for="name") Nombre y Apellido
+					input(type="text" placeholder="Nombre y Apellido" id="name")
+				.cell.form-block.email
+					label.email(for="email") Email
+					input(type="email" placeholder="Email" id="email" inputmode="email")
+				.cell.form-block.email
+					label.email(for="phone") Teléfono
+					input(type="tel" placeholder="Teléfono" id="phone" inputmode="tel")
+				.cell.form-block.email
+					label.email(for="id-number") Número de Identidad
+					input(type="text" placeholder="Número de Identidad" id="id-number" inputmode="numeric")
+				.cell.form-block.subscribe.text-center
+					input.button.bdo-orange-btn.large(type="submit" value="Enviar Resultado")
+
+
+
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/valle.jpg", alt="Valle")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Apoyando al pequeño de hoy, hacemos el grande del mañana.
+		a.button.bdo-orange-btn.large(href="page.html" title="Conozca Nuestra Historia") Nuestra Historia		
+
+include ../footer.pug

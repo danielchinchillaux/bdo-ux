@@ -1,0 +1,144 @@
+
+
+// Product Landing Grids
+.product-grid {
+	max-width: $width1024;
+	margin: 6rem auto 6rem auto;
+	padding: 0 1.5rem;
+
+	.bdo-card {
+		margin-bottom: 2rem;
+	}
+}
+
+// Agencias
+.branches-map-dsk {
+	margin-top: 2rem;
+	box-shadow: $bdo-shadow-soft;
+
+	.map-embed iframe {
+		height: 20rem;
+	}
+}
+.map-embed iframe {
+	width: 100%;
+	border-top-left-radius: $global-radius;
+	border-top-right-radius: $global-radius;
+}
+
+.map-details {
+	padding: 1.5rem;
+	background: $white98;
+	border-bottom-left-radius: $global-radius;
+	border-bottom-right-radius: $global-radius;
+
+	.button {
+		margin-bottom: 0;
+	}
+}
+
+
+// Propiedades
+.browse-feed {
+	margin: 2rem auto 4rem auto;
+	max-width: $width1280;
+	padding: 0 1rem;
+}
+
+.cards-grid {
+	padding: 0rem;
+}
+
+.subscribe-card {
+	margin-top: 6rem;
+
+	.bdo.subscription-form {
+		padding-top: 3rem;	
+	}
+}
+
+.contact-column {
+	@include breakpoint (medium down) {
+		margin-top: 3rem;
+	}
+}
+
+
+.bdo-modal.filters {
+	padding: 2rem 1.5rem;
+}
+
+.properties-type-selector {
+	button.button {
+		text-align: left;	
+	}
+
+	&.filter-block {
+		button.button {
+			font-size: 1.4rem;
+			padding: 1.5rem;
+		}
+	}
+}
+
+
+
+ul.bdo.dropdown-pane {
+	margin: 0;
+	padding: 0;
+	background: $white98;
+	border: none;
+	list-style: none;
+	box-shadow: $bdo-shadow-harsh;
+	z-index: 10;
+
+	li {
+		// margin: 0.5rem;
+		a {
+			font-weight: 700;
+			padding: 0.8rem 1rem 0.8rem 1.5rem;
+			color: $moss;
+			display: block;
+			font-size: 1.2rem;
+			letter-spacing: $minus-tracking-x1;
+			&:hover {
+				background-color: $pale-mint;
+			}
+		}
+
+	}
+
+}
+
+// Préstamos Page
+.content-highlights {
+	padding: 12vh 10vw;
+	color: $white98;
+	margin-bottom: 2rem;
+
+	.title {
+		letter-spacing: $minus-tracking-x2;
+		margin-bottom: 1.5rem;
+	}
+
+	.special-facts {
+		color: $white98;
+		margin: 2rem 0;
+
+		li {
+			margin-right: 2rem;
+		}
+
+		.caps-label {
+			color: $white98;
+			font-size: 1.1rem;
+		}
+
+		.key-value {
+			font-size: 2rem;
+		}
+
+
+	}
+
+}

@@ -1,0 +1,125 @@
+footer.bdo-global-footer {
+	background: $white98;
+	padding: 5vw;
+
+	.footer-container {
+		max-width: $width1280;
+		margin: 0 auto;
+	}
+
+
+	.logo-and-shortcuts {
+		@include breakpoint (small only) {
+			margin: 1.5rem 0;
+		}
+	}
+
+	.footer-logo {
+		width: 100%;
+		@include breakpoint (large up) {
+			width: 14rem;
+		}
+
+		a {
+			display: block;
+		}
+		img {
+			max-width: 14rem;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	nav.footer-links {
+		@include breakpoint (small) {
+			justify-content: center;
+		}
+
+		@include breakpoint (large up) {
+			justify-content: flex-start;
+		}
+
+		letter-spacing: -0.03rem;
+		
+		.links-column {
+			padding: 0 6rem 1rem 0;
+		}
+
+		h5 {
+			font-weight: 900;
+			font-size: 1.1rem;
+			color: $mid-moss;
+		}
+		ul {
+			list-style: none;
+			color: $pale-moss;
+			font-weight: 500;
+			margin: 0;
+			line-height: 2;
+			font-size: 1.1rem;
+
+			li {
+				a {
+					color: $pale-moss;
+					&:hover {
+						// text-decoration: underline;
+						color: $moss;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.download-apps {
+	@include breakpoint (medium down) {
+		margin: 2rem 0 0 0;
+	}
+
+	ul {
+		margin: 0;
+		list-style: none;
+		li a {
+			display: block;
+
+			img {
+				width: auto;
+				max-height: 3.2rem;
+				display: block;
+			}
+
+		}
+	}
+}
+
+// MISC STYLES
+.social-and-apps {
+	ul {
+		margin: 0;
+		list-style: none;
+		font-size: 2rem;
+		@include breakpoint (small only) {
+			font-size: 1.8rem;
+		}
+
+
+		li {
+			margin-right: 1.4rem;
+			&:last-child {
+				margin-right: 0;
+			}
+
+			a {
+				color: $mid-moss;
+				transition: 0.2s;
+
+				&:hover, &:focus {
+					color: $orange;
+				}
+			}
+		}
+	}
+}

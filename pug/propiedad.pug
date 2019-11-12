@@ -1,0 +1,89 @@
+include header.pug
+
+article.property-article.grid-x
+	section.cell.property-details.grid-x
+		.cell.gallery-column.small-12.large-7.grid-y
+			include components/gallery-property.pug
+
+		.cell.details-column.small-12.large-5.grid-y
+			.cell.property-title
+				h1.h3 Hyundai Elantra 2016 1800cc Mecánico de Agencia
+			.cell.property-tags.flex-container
+				span.property-tag L289,000
+				span.property-tag 2016
+
+			.cell.financing-panel.grid-x.grid-padding-x
+				img.deco(src="img/icons/hand-coins.svg", alt="")
+				.cell.financing-title
+					h2.h4 Financiamiento Disponible
+				ul.cell.financing-options.grid-x.grid-padding-x
+					li.cell.grid-y.shrink
+						span.key-value L8,120
+						span.key-label Cuotas Desde
+					li.cell.grid-y.shrink.text-center
+						span.key-value 4
+						span.key-label Años
+					li.cell.grid-y.shrink
+						span.key-value 15%
+						span.key-label Interés
+					li.cell.grid-y.shrink
+						span.key-value 10%
+						span.key-label Prima
+							
+	
+	section.property-info.grid-x
+		.cell.description-column.small-12.large-7.small-order-1.large-order-1
+			.content-block
+				h3 Ubicación
+				p Tegucigalpa, Francisco Morazán
+
+				h3 Descripción
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		
+		.cell.contact-column.small-12.large-5.small-order-2.large-order-2
+			.cell.bdo-card.bubble-card.property-contact.grid-x.shrink
+				.cell.card-bubble.lime-grd
+					i.icon-contact.white98
+				.cell.card-content
+					ul.contact-details
+						li
+							i.icon-contact.pale-moss.margin-r2x
+							span: strong Dennis Alberto Aguilar
+						li
+							i.icon-call-2.pale-moss.margin-r2x
+							a(href="tel:22904100") 2290-41-00 
+							span Ext. 401376
+						li
+							i.icon-email.pale-moss.margin-r2x
+							a(href="mailto:daguilar@bancocci.com") daguilar@bancocci.com
+						li
+							i.icon-whatsapp.pale-moss.margin-r2x
+							a(href="https://api.whatsapp.com/send?phone=50494675735") Whatsapp
+			
+			.cell.subscribe-card
+				.cell.bdo-card.bubble-card.email-notification.grid-x.shrink
+					.cell.card-bubble.lime-grd
+						i.icon-bell.white98
+					.cell.card-content
+						p.text-center Reciba notificaciones de  nuevas propiedades cada mes.
+						form.bdo.subscription-form.cell.grid-x.grid-margin-y
+							.cell.form-block.username
+								label.username(for="username") Nombre
+								input.gray-inpt(type="text" placeholder="Nombre" id="username")
+							.cell.form-block.email
+								label.email(for="email") Email
+								input.gray-inpt(type="email" placeholder="Email" id="email")
+							.cell.form-block.subscribe
+								input.button.bdo-orange-btn.large.expanded(type="submit", value="Suscribirme")
+		
+							
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/beach.jpg", alt="Vacaciones en la playa")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Sus vacaciones son inolvidables, nuestras promos también
+		a.button.bdo-orange-btn.large(href="page.html" title="Ver Promociones") Ver Promociones
+		
+
+include footer.pug

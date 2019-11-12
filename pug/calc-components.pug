@@ -1,0 +1,247 @@
+include header.pug
+
+
+section.wizard-wrapper.lime-grd-light.grid-x
+	.cell.large-4.show-for-large.wizard-title
+		h1.h2.strong.text-right Calculadora de Cuotas:
+		h2.h3.strong.text-right Préstamo para Vehículos
+	.cell.small-12.medium-12.large-8.wizard-container.grid-x
+		.cell.wizard-header.grid-x
+			.cell.wizard-controls
+				a.back-arrow.button.bdo-link-btn(href="#")
+					i.icon-arro-left
+			.cell.wizard-steps.grid-x
+				ul.cell.shrink.grid-x.grid-margin-x
+					li.cell.shrink: a.button.step.done(href="#") 1
+					li.cell.shrink: a.button.step.current(href="#") 2
+					li.cell.shrink: a.button.step.disabled(href="#") 3
+					li.cell.shrink: a.button.step.disabled(href="#") 4
+					li.cell.shrink: a.button.step.disabled(href="#") 5
+			
+			.cell.section-title
+				h2.text-center Préstamo para Vivienda
+			.cell.wizard-bubble.flex-container.align-center
+				.bubble.lift-up
+					i.icon-wallet.leaf
+		
+		.cell.wizard-block.wizard-results.padded.grid-x.grid-padding-x.align-center
+			.cell.small-12.medium-8.grid-x
+				.cell.fee.auto
+					span.key-value.leaf.strong L9240.91
+					span.key-label.forest Cuota Mensual
+				.cell.interest.small-3.text-right
+					span.key-value.moss 12%
+					span.key-label.pale-moss Interés
+				.cell.downpayment.small-3.text-right
+					span.key-value.moss 10%
+					span.key-label.pale-moss Prima
+		
+		.cell.wizard-flag.lime-grd 
+			strong
+				i.icon-check-circle.margin-r1x
+				| Posible Aceptación
+		
+		.cell.wizard-flag.cherry-grd 
+			strong
+				i.icon-alert-octagon.margin-r1x
+				| Cuota muy alta para sus ingresos
+
+
+		.cell.wizard-block.grid-x.grid-margin-y.align-center.padded
+			.cell
+				h4.strong.text-center ¿Cómo desea pagar su préstamo?
+			.cell.grid-x.grid-margin-y.align-center
+				.cell.small-12.medium-8
+					a.bdo-card.hz-icon-card.grid-x.height-160
+						.card-title-overlay.cell.small-8.flex-container.align-bottom
+							h3.card-title Con Fondos Propios
+						.hz-icon-overlay.cell.small-4.flex-container.align-middle
+							img(src="img/icons/wallet.svg", alt="Billetera")
+				.cell.small-12.medium-8
+					a.bdo-card.hz-icon-card.grid-x.height-160
+						.card-title-overlay.cell.small-8.flex-container.align-bottom
+							h3.card-title Con Fondos de BANHPROVI
+						.hz-icon-overlay.cell.small-4.flex-container.align-middle
+							img(src="img/icons/gov.svg", alt="Gobierno")
+				.cell.small-12.medium-8
+					span.has-tip.top(data-tooltip='', tabindex='2', title='1) Lorem ipsum dolor sit. 2) Ravenna et elipsim scutum amet consecuter. 3) Altae equites venero veritas.') 
+						i.icon-help.margin-r1x
+						| ¿Cómo calificar a fondos de BANHPROVI?
+						
+		
+		.cell.wizard-block.flex-container.align-center
+			a.button.bdo-green-btn.wizard-action(href="#")
+				i.icon-arrow-right
+		
+		.cell.wizard-block.padded.grid-x.align-center
+			.cell.wizard-amount-input.small-12.medium-8
+				label(for="income") Sus Ingresos Mensuales
+				.input-wrapper
+					.currency
+						span.ghost-moss L
+					.operators
+						button.button.operator-btn
+							i.icon-minus
+						button.button.operator-btn
+							i.icon-plus
+
+					input(type="number" step="1000" inputmode="numeric" placeholder="0" id="income")
+				span.field-error.cherry.strong 
+					i.icon-alert-octagon.margin-r1x
+					| Favor ingrese un valor de 15,000 en adelante.
+			.cell.small-12.medium-8
+				p.minus-tracking-x1.margin-t3x
+					strong Cuentan como ingresos: 
+					| su salario tras deducciones, ingresos por alquileres.
+
+		.cell.wizard-block.padded.grid-x.align-center
+			.cell.wizard-amount-input.small-12.medium-8
+				label(for="downpayment") Prima (10% Mínimo)
+				.input-wrapper
+					.currency
+						span.ghost-moss L
+					.operators
+						button.button.operator-btn.disabled
+							i.icon-minus
+						button.button.operator-btn
+							i.icon-plus
+
+					input.error(type="number" step="1000" inputmode="numeric" placeholder="0" id="downpayment" value="9600")
+				
+				span.field-error.cherry.strong 
+					i.icon-alert-octagon.margin-r1x
+					| La prima no puede ser menor al 10%
+
+		.cell.wizard-block.padded.flex-container.align-center
+			button.button.bdo-orange-btn.large Calcular Cuotas
+		
+		.cell.wizard-block.padded.grid-x.align-center
+			.cell.small-12.medium-8
+				.cell.text-center
+					span.wizard-label El vehículo que quiero es:
+				.cell.shrink.button-group.bdo.wizard-switcher.flex-container.align-center
+					button.button.bdo-white-btn.large.is-green-active Nuevo
+					button.button.bdo-white-btn.large Usado 
+
+
+		.cell.wizard-block.padded.grid-x.align-center
+			.cell.small-12.medium-8.grid-x
+				.cell
+					span.wizard-label ¿En cuántos años desea pagarlo?		
+				.cell.shrink
+					.button-group.wizard-switcher
+						button.button.bdo-white-btn.large.text-center
+							span.year 2
+							span.term Años
+					
+						button.button.bdo-white-btn.large.text-center
+							span.year 3
+							span.term Años
+						
+						button.button.bdo-white-btn.large.text-center
+							span.year 4
+							span.term Años
+						
+						button.button.bdo-white-btn.large.text-center.is-green-active
+							span.year 5
+							span.term Años
+						
+						button.button.bdo-white-btn.large.text-center
+							span.year 6
+							span.term Años
+		.cell.wizard-block.wizard-callout.cherry-grd.grid-x.align-center
+			.cell.small-12.medium-8
+				h4.strong
+					i.icon-alert-octagon.margin-r1x
+					| Cuota muy alta para sus ingresos.
+				p.margin-t2x Para cuidar su estabilidad financiera, Banco de Occidente no le recomienda esta cuota por sus ingresos.
+		
+		.cell.wizard-block.padded.flex-container.align-center
+			a.button.bdo-green-btn.wizard-action.disabled(href="#")
+				i.icon-arrow-right
+
+		.cell.wizard-block.padded.grid-y.margin-t3x
+			.bubble-note.cell.grid-x.align-middle
+				.cell.shrink
+					.icon-bubble
+						i.icon-credit-history.leaf
+				.cell.auto.padding-l3x
+					span.title ¿Tiene deudas?
+					p Si usted es un buen pagador tiene más probablilidades tiene de ser aceptado.
+			
+			.bubble-note.cell.grid-x.align-middle
+				.cell.shrink
+					.icon-bubble
+						i.icon-grants.leaf
+				.cell.auto.padding-l3x
+					span.title Garantías de Pago
+					p Como avales o propiedades que pueda ofrecer como hipoteca en caso de incumplimiento.
+			
+			.bubble-note.cell.grid-x.align-middle
+				.cell.shrink
+					.icon-bubble
+						i.icon-assessment.leaf
+				.cell.auto.padding-l3x
+					span.title Asesoría Financiera
+					p Banco de Occidente le protege y asesora su experiencia financiera.
+
+		.cell.wizard-block.wizard-callout.padded.text-center.lime-grd
+			h4.strong ¿Es usted un buen pagador?
+			p Con sus ingresos actuales más un buen record crediticio usted podría aspirar a una cuota máxima de:
+		
+		.cell.wizard-block.wizard-summary.padded.grid-x.align-center
+			.cell.small-12.medium-8.grid-x.grid-margin-y
+				.cell.grid-x.grid-padding-x.align-justify
+					.cell.shrink
+						span.key-label Vehículo Nuevo
+					.cell.shrink
+						span.key-label Ingresos: 29,000
+				.cell.grid-x.grid-padding-x
+					.cell.auto
+						span.key-value.strong L520,000
+						span.key-label.pale-moss Máximo Financiable
+					.cell.auto
+						span.key-value.leaf.strong L10,118.92
+						span.key-label.forest Cuota Mensual
+				.cell.grid-x.grid-padding-x
+					.cell.shrink.text-center
+						span.key-value 12%
+						span.key-label.pale-moss Interés
+					.cell.shrink.text-center
+						span.key-value 10%
+						span.key-label.pale-moss Prima
+					.cell.shrink.text-center
+						span.key-value 6
+						span.key-label.pale-moss Años
+
+		.cell.wizard-block.wizard-actions.padded.grid-x.align-center
+			.cell.small-12.medium-8.grid-x.grid-margin-y
+				a.cell.bdo-card.hz-icon-card.grid-x.small-12(href="#")
+					.card-title-overlay.cell.small-8.flex-container.align-bottom
+						span.card-title.small Que un agente me llame
+					.hz-icon-overlay.cell.small-4.flex-container.align-middle
+						img(src="img/icons/call-bubble.svg", alt="Llamar")
+				
+				a.cell.bdo-card.hz-icon-card.grid-x.small-12(target="_blank" href="agencias.html")
+					.card-title-overlay.cell.small-8.flex-container.align-bottom
+						h3.card-title.small Visite una Agencia
+					.hz-icon-overlay.cell.small-4.flex-container.align-middle
+						img(src="img/icons/map-pin.svg", alt="Pin")
+				
+				a.cell.bdo-card.hz-icon-card.grid-x.small-12(data-open="bdo-call")
+					.card-title-overlay.cell.small-8.flex-container.align-bottom
+						span.card-title.small Llamar al Call Center
+					.hz-icon-overlay.cell.small-4.flex-container.align-middle
+						img(src="img/icons/call-bubble.svg", alt="Llamar")
+
+
+
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/valle.jpg", alt="Valle")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Apoyando al pequeño de hoy, hacemos el grande del mañana.
+		a.button.bdo-orange-btn.large(href="page.html" title="Conozca Nuestra Historia") Nuestra Historia		
+
+include footer.pug

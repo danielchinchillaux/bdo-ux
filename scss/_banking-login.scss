@@ -1,0 +1,71 @@
+.reveal.bdo-login {
+	padding: 0 0 2rem 0;
+	box-shadow: $bdo-shadow-harsh;
+	transition: 0.1s;
+	width: 22rem;
+
+	@include breakpoint (small only) {
+		width: 100vw;
+		margin: 0 auto;
+	}
+
+	.login-banner {
+		color: $white98;
+		padding-top: 1rem;
+		padding-bottom: 4rem;
+
+		i.banking-logo {
+			font-size: 6rem;
+		}
+
+		h2 {
+			font-size: 1.4rem;
+			font-weight: 800;
+			letter-spacing: $minus-tracking-x2;
+		}
+	}
+
+	.close-button {
+		color: $white98;
+	}
+
+	form.login-content {
+		margin-top: -4.5rem;
+		padding: 0 1.5rem 1rem 1.5rem;
+
+		
+
+		.login-helpers {
+			a {
+				color: $pale-moss;
+				font-weight: 500;
+				&:hover {
+					color: $leaf;
+				}
+			}
+		}
+
+		.action {
+			.button {
+				margin-bottom: 0;
+			}
+		}
+
+		label {
+			font-weight: 800;
+			font-size: 1.2rem;
+			letter-spacing: $minus-tracking-x1;
+
+			&.username {
+				color: $white98;
+			}
+			
+
+		}
+		input[type="text"], input[type="password"] {
+			border: none;
+			box-shadow: $bdo-shadow-soft;
+		}	
+	}
+
+}

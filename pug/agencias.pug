@@ -1,0 +1,240 @@
+include header.pug
+
+header.generic-hero-header.faux-grd.flex-container.align-middle
+	.cell
+		h1.title.h2 Agencias y Horarios
+	img.donut-deco(src="img/full-donut-lime.svg", alt="")
+
+section.filter-bar-wrapper.hide-for-large(data-sticky-container)
+	.cell.shrink.filter-bar-mob.grid-x.align-justify.sticky(data-sticky data-margin-top="0" data-top-anchor="feed-anchor:top" data-btm-anchor="billboard-anchor:bottom" data-sticky-on="small")
+		.cell.shrink
+			button.button.bdo-gray-btn.large(data-open="bdo-branches-filters-modal")
+				i.icon-levels-1.margin-r1x
+				| Filtros
+		.cell.shrink
+			.properties-type-selector
+				button.button.bdo-orange-btn.large(href="#") 
+					i.icon-pin.margin-r1x
+					| Ver en Mapa
+					
+				ul#properties-dropdown-mob.bdo.dropdown-pane(data-dropdown data-auto-focus="true")
+					li: a(href="#") Casas
+					li: a(href="#") Terrenos
+					li: a(href="#") Edificios
+					li: a(href="#") Bodegas
+					li: a(href="#") Locales
+
+include blocks/branches-filters-modal.pug
+
+section.grid-x.grid-padding-x.align-center.browse-feed
+	aside.cell.sidebar-filters.large-3.show-for-large
+		form
+			ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+				li.accordion-item.is-active(data-accordion-item)
+					a.accordion-title(href="#") Tipo
+					.accordion-content(data-tab-content)
+						fieldset
+							ul
+								li
+									input#type1.checkbox-large(type='checkbox')
+									label(for='type1') Agencias (6)
+								li
+									input#type2.checkbox-large(type='checkbox')
+									label(for='type2') Autobancos (3)
+								li
+									input#type3.checkbox-large(type='checkbox')
+									label(for='type3') Cajeros ATM (6)
+		.branches-map-dsk.grid-x
+			.cell.map-embed
+				iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8983.856497941924!2d-87.19072021344988!3d14.076964448518025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b03951332dbee49!2sBanco%20de%20Occidente!5e0!3m2!1sen!2shn!4v1571778222421!5m2!1sen!2shn', width='600', height='450', frameborder='0', style='border:0;', allowfullscreen='')
+			.cell.map-details.grid-x.grid-margin-y.text-center
+				.cell
+					a.button.bdo-orange-btn.large(href="https://goo.gl/maps/fbsaXbHDbScqAFqr8" target="_blank")
+						i.icon-pin.margin-r1x
+						| Abrir Mapa
+
+
+
+
+	section.grid-x.small-12.medium-12.large-auto.align-center#feed-anchor
+		section.grid-x.small-12.medium-12.large-auto.align-center
+				.cell.top-filters.grid-margin-x.grid-margin-y
+					.cell.shrink
+						form.bdo.upper-filter
+							//- label(for='region') Ubicación:
+							.cell.select-icon-hack
+								i.icon-map-pin.ghost-moss.before
+								i.icon-chevron-down.ghost-moss.after
+								select#region-dropdown(name='region').region-dropdown
+									option(value='') Comayagua (14)
+									option(value='Atlantida') Atlántida (8)
+									option(value='Choluteca') Choluteca
+									option(value='Cortes') Cortés
+
+		.cell.cards-grid.grid-x.grid-margin-x.grid-margin-y
+			article.cell.bdo-card.agency-card.small-12.medium-6.large-4
+				.grid-x
+					figure.cell.agency-cover.lime-grd-light
+						.agency-icon
+							i.icon-bank
+						.agency-info
+							span.subtitle.white98 Comayagua
+							.title 
+								h2 
+									span.type Agencia 
+										| La Libertad
+					
+					.cell.agency-details.grid-x
+						.cell.schedule.flex-container.flex-dir-column
+							span.status.caps-label.open Abierto
+							span.hours.open 8:30am - 11:30am
+						.cell.phone
+							a(href="tel:2227-9000" title="Llamar")
+								i.icon-telephone-3.margin-r1x
+								| 2784-5932
+						.cell.address
+							p Barrio Arriba, costado Oeste del centro de salud, La Libertad, Comayagua.
+						.cell.directions.text-center
+							a.button.bdo-gray-btn.large(target="_blank" href="https://goo.gl/maps/QbGnxU4aUi2FLA8M7")
+								i.icon-pin.margin-r1x
+								| Ver en Mapa
+			article.cell.bdo-card.agency-card.small-12.medium-6.large-4
+				.grid-x
+					figure.cell.agency-cover.graphite-grd
+						.agency-icon
+							i.icon-bank
+						.agency-info
+							span.subtitle.white98 Comayagua
+							.title 
+								h2
+									span.type Agencia 
+									| Siguatepeque
+					
+					.cell.agency-details.grid-x
+						.cell.schedule.flex-container.flex-dir-column
+							span.status.caps-label.closed Cerrado
+							span.hours.closed 8:30am - 4:30pm
+						.cell.phone
+							a(href="tel:2227-9000" title="Llamar")
+								i.icon-telephone-3.margin-r1x
+								| 2773-0310
+						.cell.address
+							p Barrio El Centro, esquina opuesta a plaza cívica La Amistad, Siguatepeque, Comayagua.
+						.cell.directions.text-center
+							a.button.bdo-gray-btn.large(target="_blank" href="https://goo.gl/maps/QbGnxU4aUi2FLA8M7")
+								i.icon-pin.margin-r1x
+								| Ver en Mapa
+			
+			article.cell.bdo-card.agency-card.small-12.medium-6.large-4
+				.grid-x
+					figure.cell.agency-cover.lime-grd-light
+						.agency-icon
+							i.icon-bank
+						.agency-info
+							span.subtitle.white98 Comayagua
+							.title 
+								h2
+									span.type Agencia 
+									| Taulabé
+					
+					.cell.agency-details.grid-x
+						.cell.schedule.flex-container.flex-dir-column
+							span.status.caps-label.open Abierto
+							span.hours.open 8:45am - 4:30am
+						.cell.phone
+							a(href="tel:2227-9000" title="Llamar")
+								i.icon-telephone-3.margin-r1x
+								| 2784-5932
+						.cell.address
+							p Barrio El Centro, calle principal, Taulabé, Comayagua.
+						.cell.directions.text-center
+							a.button.bdo-gray-btn.large(target="_blank" href="https://goo.gl/maps/fbsaXbHDbScqAFqr8")
+								i.icon-pin.margin-r1x
+								| Ver en Mapa
+			article.cell.bdo-card.agency-card.small-12.medium-6.large-4
+				.grid-x
+					figure.cell.agency-cover.lime-grd-light
+						.agency-icon
+							i.icon-bank
+						.agency-info
+							span.subtitle.white98 Comayagua
+							.title 
+								h2
+									span.type Agencia 
+									| Mercado San Pablo
+					
+					.cell.agency-details.grid-x
+						.cell.schedule.flex-container.flex-dir-column
+							span.status.caps-label.open Abierto
+							span.hours.open 8:30am - 4:45pm
+						.cell.phone
+							a(href="tel:2227-9000" title="Llamar")
+								i.icon-telephone-3.margin-r1x
+								| 2784-5932
+						.cell.address
+							p Barrio El Centro, 1ra. Calle, 1ra. Avenida, Noreste, contiguo a Hotel Panamericano, Siguatepeque, Comayagua.
+						.cell.directions.text-center
+							a.button.bdo-gray-btn.large(target="_blank" href="https://goo.gl/maps/QbGnxU4aUi2FLA8M7")
+								i.icon-pin.margin-r1x
+								| Ver en Mapa
+			article.cell.bdo-card.agency-card.small-12.medium-6.large-4
+				.grid-x
+					figure.cell.agency-cover.lime-grd-light
+						.agency-icon
+							i.icon-car-3
+						.agency-info
+							span.subtitle.white98 Comayagua
+							.title 
+								h2
+									span.type Autobanco 
+									| Siguatepeque
+					
+					.cell.agency-details.grid-x
+						.cell.schedule.flex-container.flex-dir-column
+							span.status.caps-label.open Abierto
+							span.hours.open 8:30am - 4:45pm
+						.cell.phone
+							a(href="tel:2227-9000" title="Llamar")
+								i.icon-telephone-3.margin-r1x
+								| 2784-5932
+						.cell.address
+							p Barrio El Centro, 1ra. Calle, 1ra. Avenida, Noreste, contiguo a Hotel Panamericano, Siguatepeque, Comayagua.
+						.cell.directions.text-center
+							a.button.bdo-gray-btn.large(target="_blank" href="https://goo.gl/maps/QbGnxU4aUi2FLA8M7")
+								i.icon-pin.margin-r1x
+								| Ver en Mapa
+			article.cell.bdo-card.agency-card.small-12.medium-6.large-4
+				.grid-x
+					figure.cell.agency-cover.lime-grd-light
+						.agency-icon
+							i.icon-atm
+						.agency-info
+							span.subtitle.white98 Comayagua
+							.title 
+								h2
+									span.type ATM 
+									| Mall Premier
+					
+					.cell.agency-details.grid-x
+						.cell.schedule.flex-container.flex-dir-column
+							span.status.caps-label.open Abierto
+							span.hours.open 10:00am - 9:00pm
+						.cell.address
+							p Mall Premier contiguo a Food Court, Siguatepeque, Comayagua.
+						.cell.directions.text-center
+							a.button.bdo-gray-btn.large(target="_blank" href="https://goo.gl/maps/QbGnxU4aUi2FLA8M7")
+								i.icon-pin.margin-r1x
+								| Ver en Mapa
+								
+				
+
+
+section.billboard.flex-container.align-middle#billboard-anchor
+	.billboard-cover
+		img(src="img/stocks/shop-online.jpg", alt="Compras en Línea")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow ¿Compras por internet? Banco de Occidente le protege
+		a.button.bdo-orange-btn.large(href="#" title="Ver Educación Financiera") Ver Consejos
+		
+
+include footer.pug

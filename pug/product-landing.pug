@@ -1,0 +1,56 @@
+include header.pug
+
+
+
+
+header.generic-hero-header.faux-grd.flex-container.align-middle
+	.cell
+		h1.title Préstamos
+	img.donut-deco(src="img/full-donut-lime.svg", alt="")
+
+.cell.content-type-switcher.flex-container.align-center
+	.button-group.bdo
+		a.button.bdo-white-btn.large.is-green-active() Personas
+		a.button.bdo-white-btn.large(href="product-landing-empresas.html") Empresas
+
+
+section.product-grid.grid-x
+	.cell.grid-x.grid-margin-x
+		a.cell.small-12.medium-6.large-4.bdo-card.photo-card.height-160(href="prestamo-page.html")
+			.card-title-overlay
+				h3.card-title Préstamo para Vehículos
+			.card-poster
+				img(src="img/stocks/cars.jpg", alt="")
+		a.cell.small-12.medium-6.large-4.bdo-card.photo-card.height-160
+			.card-title-overlay
+				h3.card-title Préstamo para Vivienda
+			.card-poster
+				img(src="img/stocks/casa.jpg", alt="")
+		a.cell.small-12.medium-6.large-4.bdo-card.photo-card.height-160
+			.card-title-overlay
+				h3.card-title Préstamo Personal
+			.card-poster
+				img(src="img/stocks/grad.jpg", alt="")
+		a.cell.small-12.medium-6.large-4.bdo-card.photo-card.height-160
+			.card-title-overlay
+				h3.card-title Consolidar Deudas
+			.card-poster
+				img(src="img/stocks/consolidar.jpg", alt="")
+		a.cell.small-12.medium-6.large-4.bdo-card.photo-card.height-160
+			.card-title-overlay
+				h3.card-title Préstamo Agrícola
+			.card-poster
+				img(src="img/stocks/coffee.jpeg", alt="")
+		
+		
+
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/beach.jpg", alt="Vacaciones en la playa")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Sus vacaciones son inolvidables, nuestras promos también
+		a.button.bdo-orange-btn.large(href="page.html" title="Ver Promociones") Ver Promociones
+		
+
+include footer.pug

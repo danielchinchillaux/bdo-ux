@@ -1,0 +1,99 @@
+nav#bdo-nav-dsk.grid-x.grid-margin-y.show-for-large
+	.cell.upper-nav.grid-x.grid-padding-x.align-middle
+		.cell.bdo-logo-dsk.shrink
+			a(href="home.html")
+				img(src="img/bdo-logo-color.svg", alt="Logo Banco de Occidente SA Honduras")
+		
+		//- CURRENCY
+		.cell.currency-header.grid-x.auto.align-middle.align-center
+			.cell.switcher.shrink
+				ul.tabs.bdo-switcher-tabs.grid-x(data-tabs)#currency-switcher-dsk
+					li.tabs-title.is-active.cell.shrink
+						a(href="#dollar-panel-1", aria-selected="true") $
+					li.tabs-title.cell.shrink
+						a(href="#euro-panel-2", data-tabs-target="euro-panel-2", aria-selected="true") €
+			.cell.currency-content.tabs-content.bdo.auto(data-tabs-content="currency-switcher-dsk")
+				.tabs-panel.is-active#dollar-panel-1
+					.cell.grid-x
+						.cell.currency-block.grid-y.auto
+							.cell.title.shrink.trunk-ellipsis
+								span.caps-label Venta
+							.cell.price.shrink.trunk-ellipsis
+								span.forest
+									strong L 
+									strong 24.72
+									span 09
+							.cell.trend
+								span.pale-moss
+									i.icon-arrow-up.margin-r1x
+									| 0.1429
+						.cell.currency-block.grid-y.auto
+							.cell.title.shrink.trunk-ellipsis
+								span.caps-label Compra
+							.cell.price.shrink.trunk-ellipsis
+								span.forest
+									strong L 
+									strong 24.59
+									span 46
+							.cell.trend
+								span.pale-moss
+									i.icon-arrow-up.margin-r1x
+									| 0.2078
+
+				.tabs-panel#euro-panel-2
+					.cell.grid-x
+						.cell.currency-block.grid-y.auto
+							.cell.title.shrink.trunk-ellipsis
+								span.caps-label Venta
+							.cell.price.shrink.trunk-ellipsis
+								span.forest
+									strong L 
+									strong 28.70
+									span 09
+							.cell.trend.trunk-ellipsis
+								span.pale-moss
+									i.icon-arrow-down.margin-r1x
+									| 0.4401
+						.cell.currency-block.grid-y.auto
+							.cell.title.shrink.trunk-ellipsis
+								span.caps-label Compra
+							.cell.price.shrink.trunk-ellipsis
+								span.forest
+									strong L 
+									strong 26.98
+									span 13
+							.cell.trend.trunk-ellipsis
+								span.pale-moss
+									i.icon-arrow-down.margin-r1x
+									| 0.0242
+			
+			.cell.graph-trigger.shrink
+				button.button.has-tip.bottom(data-open="bdo-currency-graph" data-tooltip='', tabindex='2', title='Historial del Precio del Dólar/Euro')
+					i.icon-trend
+
+		.cell.top-header-links.grid-x.align-middle.align-right.shrink
+			.cell.shrink
+				a(href="agencias.html").button.bdo-link-btn
+					i.icon-map-pin.ghost-moss.margin-r1x
+					span Agencias
+			.cell.shrink
+				a(data-open="bdo-call").button.bdo-link-btn
+					i.icon-call-bubble.ghost-moss.margin-r1x
+					span Call Center
+			.cell.shrink.margin-l2x
+				a(data-open="banking-login").button.bdo-orange-btn#bdo-login-btn-dsk
+					i.icon-bdo-icon.margin-r1x
+					span Banca Digital
+	.cell.lower-nav.grid-x.align-center
+		nav#lower-nav-dsk.grid-x.align-middle
+			.nav-switcher.cell.shrink
+				ul.tabs.bdo-switcher-tabs.grid-x(data-tabs)#menu-switcher-dsk
+					li.tabs-title.is-active.cell.shrink
+						a(href="#menu-personas-1", aria-selected="true") Personas
+					li.tabs-title.cell.shrink
+						a(href="#menu-empresas-2", data-tabs-target="menu-empresas-2", aria-selected="true").active-sunset Empresas
+			.cell.menus-content.tabs-content.bdo.shrink(data-tabs-content="menu-switcher-dsk")
+				.tabs-panel.is-active#menu-personas-1
+					include personas.pug
+				.tabs-panel#menu-empresas-2
+					include empresas.pug

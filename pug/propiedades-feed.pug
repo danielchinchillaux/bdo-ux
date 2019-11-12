@@ -1,0 +1,270 @@
+include header.pug
+
+
+
+
+header.generic-hero-header.faux-grd.flex-container.align-middle
+	.cell
+		h1.title.h2 Vehículos en Venta
+	img.donut-deco(src="img/full-donut-lime.svg", alt="")
+
+
+section.filter-bar-wrapper.hide-for-large(data-sticky-container)
+	.cell.shrink.filter-bar-mob.grid-x.align-justify.sticky(data-sticky data-margin-top="0" data-top-anchor="feed-anchor:top" data-btm-anchor="pagination-anchor:bottom" data-sticky-on="small")
+		.cell.shrink
+			button.button.bdo-gray-btn.large(data-open="bdo-property-filters-modal")
+				i.icon-levels-1.margin-r1x
+				| Filtros
+		.cell.shrink
+			.properties-type-selector
+				button.button.bdo-gray-btn.large(type="button" data-toggle="properties-dropdown-mob") 
+					.flex-container.align-justify
+						span Vehículos
+						i.icon-chevron-down.moss.margin-l1x.top-fix
+				ul#properties-dropdown-mob.bdo.dropdown-pane(data-dropdown data-auto-focus="true")
+					li: a(href="#") Casas
+					li: a(href="#") Terrenos
+					li: a(href="#") Edificios
+					li: a(href="#") Bodegas
+					li: a(href="#") Locales
+	
+
+include blocks/property-filters-modal.pug
+
+section.grid-x.grid-padding-x.align-center.browse-feed#feed-anchor
+	aside.cell.sidebar-filters.large-3.show-for-large
+		form.bdo
+			.cell.filter-block.properties-type-selector
+				button.button.bdo-green-btn.expanded.large(type="button" data-toggle="properties-dropdown-dsk") 
+					.flex-container.align-justify
+						span Vehículos
+						i.icon-chevron-down.white98.margin-l1x.top-fix
+				ul#properties-dropdown-dsk.bdo.dropdown-pane(data-dropdown data-auto-focus="true")
+					li: a(href="#") Casas
+					li: a(href="#") Terrenos
+					li: a(href="#") Edificios
+					li: a(href="#") Bodegas
+					li: a(href="#") Locales
+			
+			.cell.filter-block
+				ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+					li.accordion-item.is-active(data-accordion-item)
+						a.accordion-title(href="#") Precio
+						.accordion-content(data-tab-content)
+							fieldset
+								ul
+									li
+										input#price.checkbox-large(type='checkbox')
+										label(for='price1') Más de L500,000 (1)
+									li
+										input#price.checkbox-large(type='checkbox' checked)
+										label(for='price2') L250,000 - 500,000 (8)
+									li
+										input#price.checkbox-large(type='checkbox' checked)
+										label(for='price3') L180,000 - 250,000 (4)
+									li
+										input#price4.checkbox-large(type='checkbox')
+										label(for='price4') Menos de L180,000 (1)
+
+
+		section.cell.subscribe-card
+			.cell.bdo-card.bubble-card.email-notification.grid-x.shrink
+				.cell.card-bubble.lime-grd
+					i.icon-bell.white98
+				.cell.card-content
+					p.text-center Reciba notificaciones de nuevas propiedades cada mes.
+					form.bdo.subscription-form.cell.grid-x.grid-margin-y
+						.cell.form-block.username
+							label.username(for="username") Nombre
+							input.gray-inpt(type="text" placeholder="Nombre" id="username")
+						.cell.form-block.email
+							label.email(for="email") Email
+							input.gray-inpt(type="email" placeholder="Email" id="email")
+						.cell.form-block.subscribe
+							input.button.bdo-orange-btn.large.expanded(type="submit", value="Suscribirme")
+					
+
+	
+	
+	section.grid-x.small-12.medium-12.large-auto.align-center
+		.cell.top-filters.grid-margin-x.grid-margin-y
+			.cell.shrink
+				form.bdo.upper-filter
+					//- label(for='region') Ubicación:
+					.cell.select-icon-hack
+						i.icon-map-pin.ghost-moss.before
+						i.icon-chevron-down.ghost-moss.after
+						select#region-dropdown(name='region').region-dropdown
+							option(value='') Toda Honduras (19)
+							option(value='Atlantida') Atlántida
+							option(value='Choluteca') Choluteca
+							option(value='Cortes') Cortés
+					
+		.cell.cards-grid.grid-x.grid-margin-x.grid-margin-y
+			a.cell.bdo-card.property-card(href="propiedad.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.property-cover
+						img(src="img/demo/eon.jpg", alt="")
+						.property-meta.flex-container.align-justify
+							span.price L299,000
+							span.property-extra 2017
+					.cell.property-info
+						.cell
+							span.subtitle.pale-moss Tegucigalpa
+						.cell.title
+							h2 Hyundai EON 2017 de Agencia Mecánico 1.5L
+						.cell.options.flex-container.align-justify.align-center
+							span.starting-at.pale-moss Cuotas desde:
+							span.value.leaf
+								i.icon-coin-stack.pale-moss.margin-r1x
+								| L16,543
+			a.cell.bdo-card.property-card(href="propiedad.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.property-cover
+						img(src="img/demo/spark2.jpg", alt="")
+						.property-meta.flex-container.align-justify.align-middle
+							span.price L323,000
+							span.property-extra 2018
+					.cell.property-info
+						.cell
+							span.subtitle.pale-moss Tegucigalpa
+						.cell.title
+							h2 Chevrolet Spark 2018 1300cc Mecánico de Agencia
+						.cell.options.flex-container.align-justify.align-middle
+							span.starting-at.pale-moss Cuotas desde:
+							span.value.leaf
+								i.icon-coin-stack.pale-moss.margin-r1x
+								| L6,921
+			a.cell.bdo-card.property-card(href="propiedad.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.property-cover
+						img(src="img/demo/hilux.jpg", alt="")
+						.property-meta.flex-container.align-justify.align-middle
+							span.price L288,600
+							span.property-extra 2016
+					.cell.property-info
+						.cell
+							span.subtitle.pale-moss Valle de Ángeles
+						.cell.title
+							h2 Toyota Hilux 3.0L 2016 de Agencia Mecánico
+						.cell.options.flex-container.align-justify.align-middle
+							span.starting-at.pale-moss Cuotas desde:
+							span.value.leaf
+								i.icon-coin-stack.pale-moss.margin-r1x
+								| L7,312
+			a.cell.bdo-card.property-card(href="propiedad.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.property-cover
+						img(src="img/demo/grandi10.jpg", alt="")
+						.property-meta.flex-container.align-justify.align-middle
+							span.price L182,000
+							span.property-extra 2017
+					.cell.property-info
+						.cell
+							span.subtitle.pale-moss Cantarranas
+						.cell.title
+							h2 Hyundai Grand i10 2017
+						.cell.options.flex-container.align-justify.align-middle
+							span.starting-at.pale-moss Cuotas desde:
+							span.value.leaf
+								i.icon-coin-stack.pale-moss.margin-r1x
+								| L4,990
+			a.cell.bdo-card.property-card(href="propiedad.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.property-cover
+						img(src="img/demo/4runner.jpg", alt="")
+						.property-meta.flex-container.align-justify.align-middle
+							span.price L590,000
+							span.property-extra 2016
+					.cell.property-info
+						.cell
+							span.subtitle.pale-moss Tegucigalpa
+						.cell.title
+							h2 Toyota 4Runner 2016
+						.cell.options.flex-container.align-justify.align-middle
+							span.starting-at.pale-moss Cuotas desde:
+							span.value.leaf
+								i.icon-coin-stack.pale-moss.margin-r1x
+								| L14,761
+			a.cell.bdo-card.property-card(href="propiedad.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.property-cover
+						img(src="img/demo/kicks.jpg", alt="")
+						.property-meta.flex-container.align-justify.align-middle
+							span.price L480,000
+							span.property-extra 2016
+					.cell.property-info
+						.cell
+							span.subtitle.pale-moss Tegucigalpa
+						.cell.title
+							h2 Nissan Kicks 2016 de Agencia
+						.cell.options.flex-container.align-justify.align-middle
+							span.starting-at.pale-moss Cuotas desde:
+							span.value.leaf
+								i.icon-coin-stack.pale-moss.margin-r1x
+								| L11,487
+			a.cell.bdo-card.property-card(href="propiedad.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.property-cover
+						img(src="img/demo/ford.jpg", alt="")
+						.property-meta.flex-container.align-justify.align-middle
+							span.price 289,000
+							span.property-extra 2018
+					.cell.property-info
+						.cell
+							span.subtitle.pale-moss Santa Lucía
+						.cell.title
+							h2 Ford Escape 2018
+						.cell.options.flex-container.align-justify.align-middle
+							span.starting-at.pale-moss Cuotas desde:
+							span.value.leaf
+								i.icon-coin-stack.pale-moss.margin-r1x
+								| L8,120
+		
+		.cell#pagination-anchor
+			nav(aria-label='Pagination')
+				ul.pagination.text-center
+					li.pagination-previous.disabled
+						span.show-for-sr Página
+						| Anterior 
+						
+					li.current
+						span.show-for-sr Usted está en la página
+						|  1
+					li
+						a(href='#', aria-label='Página 2') 2
+					li
+						a(href='#', aria-label='Página 3') 3
+					li.ellipsis(aria-hidden='true')
+					li
+						a(href='#', aria-label='Página 13') 6
+					li.pagination-next
+						a(href='#', aria-label='Siguiente página')
+							| Siguiente 
+							span.show-for-sr página
+		
+		section.cell.subscribe-card.hide-for-large
+			.cell.bdo-card.bubble-card.email-notification.grid-x.shrink
+				.cell.card-bubble.lime-grd
+					i.icon-bell.white98
+				.cell.card-content
+					p.text-center Reciba notificaciones de nuevas propiedades cada mes.
+					form.bdo.subscription-form.cell.grid-x.grid-margin-y
+						.cell.form-block.username
+							label.username(for="username") Nombre
+							input.gray-inpt(type="text" placeholder="Nombre" id="username")
+						.cell.form-block.email
+							label.email(for="email") Email
+							input.gray-inpt(type="email" placeholder="Email" id="email")
+						.cell.form-block.subscribe
+							input.button.bdo-orange-btn.large.expanded(type="submit", value="Suscribirme")
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/beach.jpg", alt="Vacaciones en la playa")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Sus vacaciones son inolvidables, nuestras promos también
+		a.button.bdo-orange-btn.large(href="page.html" title="Ver Promociones") Ver Promociones
+		
+
+include footer.pug

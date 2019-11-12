@@ -1,0 +1,67 @@
+include ../header.pug
+
+
+section.wizard-wrapper.lime-grd-light.grid-x
+	.cell.large-4.show-for-large.wizard-title
+		h1.h2.strong.text-right Calculadora de Cuotas:
+		h2.h4.strong.text-right Préstamo para Vehículos
+	.cell.small-12.medium-12.large-8.wizard-container.grid-x
+		.cell.wizard-header.grid-x
+			.cell.wizard-controls
+				a.back-arrow.button.bdo-link-btn(href="javascript:history.back()")
+					i.icon-arro-left
+			.cell.wizard-steps.grid-x
+				ul.cell.shrink.grid-x.grid-margin-x
+					li.cell.shrink: a.button.step.done(href="vehicular-s1.html") 1
+					li.cell.shrink: a.button.step.current(href="vehicular-s2.html") 2
+					li.cell.shrink: a.button.step.disabled(href="vehicular-s3.html") 3
+					li.cell.shrink: a.button.step.disabled(href="vehicular-s4.html") 4
+					li.cell.shrink: a.button.step.disabled(href="vehicular-s5.html") 5
+			
+			.cell.section-title
+				h2.text-center Ingresos Mensuales
+				.cell.wizard-bubble.flex-container.align-center
+					.bubble.lift-up
+						i.icon-wallet.leaf
+		
+		
+		.cell.wizard-block.wizard-callout.padded.bubble-padd.text-center.lime-grd
+			p.strong ¡Conozca sus aspiraciones de préstamo en base a sus ingresos!	
+
+
+		.cell.wizard-block.padded.grid-x.align-center.margin-t3x
+			.cell.wizard-amount-input.small-12.medium-8
+				label(for="income") Sus Ingresos Mensuales
+				.input-wrapper
+					.currency
+						span.ghost-moss L
+					.operators
+						button.button.operator-btn
+							i.icon-minus
+						button.button.operator-btn
+							i.icon-plus
+
+					input(type="number" step="1000" inputmode="numeric" placeholder="0" id="income")
+				span.field-error.cherry.strong 
+					i.icon-alert-octagon.margin-r1x
+					| Para optar un préstamo, sus ingresos no pueden ser menores a L XX,000.
+			.cell.small-12.medium-8
+				p.minus-tracking-x1.margin-t3x
+					strong Cuentan como ingresos: 
+					| su salario tras deducciones, ingresos por alquileres.
+
+		.cell.wizard-block.padded.flex-container.align-center
+			a.button.bdo-orange-btn.large(href="vehicular-s2.2.html") Calcular
+
+		include ../blocks/need-help-wizard.pug
+
+
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/valle.jpg", alt="Valle")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Apoyando al pequeño de hoy, hacemos el grande del mañana.
+		a.button.bdo-orange-btn.large(href="page.html" title="Conozca Nuestra Historia") Nuestra Historia		
+
+include ../footer.pug

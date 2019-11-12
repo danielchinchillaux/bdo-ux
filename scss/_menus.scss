@@ -1,0 +1,240 @@
+// MOBILE NAV
+nav#bdo-nav-mob {
+
+	.online-banking-bar .button {
+		border-radius: 0;
+		text-align: left;
+		font-size: 1.3rem;
+		margin-bottom: 0;
+		position: relative;
+		font-weight: 900;
+
+		i.icon-chevron-right {
+			right: 1rem;
+			position: absolute;
+		}
+	}
+
+	.mobile-nav-bar {
+		padding: 1rem;
+
+		.mobile-nav-logo {
+			display: block;
+
+			img {
+				height: 4rem;
+				width: auto;
+				padding: 0.4rem;
+			}
+
+			// .cell:last-of-type .mobile-nav-btn i {
+			// 	font-size: 1.5rem;
+			// }
+		}
+		
+		.mobile-nav-btn {
+			font-size: 2rem;
+			color: $mid-moss;
+			padding: 0.4rem;
+			display: flex;
+			align-items: center;
+			outline: none;
+			
+			
+
+			&:hover, &:active {
+				color: $orange;
+			}
+
+			.icon-label {
+				font-weight: 700;
+				font-size: 1.5rem;
+				letter-spacing: $minus-tracking-x1;
+			}
+		}
+	}
+}
+
+// Mobile Modal Menu
+#bdo-modal-menu {
+	padding: 1rem;
+	
+	.logo-modal-menu {
+		display: block;
+		
+		img {
+			height: 4.375rem;
+			width: auto;
+		}
+	}
+
+	.switcher {
+		margin: 3rem 0 2rem 0;
+	}
+}
+
+// DESKTOP NAV
+nav#bdo-nav-dsk {
+	padding: 2rem 1rem 0rem 1rem;
+
+	.bdo-logo-dsk {
+		a {
+			transition: 0.2s;
+			width: 12.5rem;
+			display: block;
+			&:hover {
+				transform: translateY(-2px);
+			}
+
+			img {
+				max-width: 12.5rem;
+				height: auto;
+				// display: block;
+			}
+		}
+	}
+
+	.button.bdo-link-btn {
+		margin-bottom: 0;
+	}
+}
+
+#bdo-login-btn-dsk {
+	font-size: 1.3rem;
+	font-weight: 900;
+	margin-bottom: 0;
+}
+
+.upper-nav {
+	max-width: $width1280;
+	margin: 0 auto;
+}
+
+nav#lower-nav-dsk {
+	padding: 1rem 0rem 2rem 0rem;
+	max-width: $width1280;
+	margin: 0 auto;
+}
+
+
+.nav-switcher {
+	.button-group {
+		margin-bottom: 0;
+
+		.button {
+			font-size: 1.2rem;
+			
+		}
+	}
+}
+
+ul.menu[data-dropdown-menu] {
+	background: transparent;
+	z-index: 100;
+
+	// First Level
+	> li {
+		> a {
+			font-weight: 700;
+			color: $mid-moss;
+			letter-spacing: $minus-tracking-x1;
+			border-radius: $global-radius;
+			// margin: 0 0.3rem;
+			padding: 1rem 1.2rem;
+			transition: 0.2s ease;
+
+
+			&:hover {
+				color: $moss;
+				background: $white98;
+				box-shadow: $bdo-shadow-soft;
+				border-radius: $global-radius;
+			}
+
+			&:active {
+				background: transparent;
+				background-image: $lime-grd-light;
+				color: $white98;
+			}
+		}
+		&.is-active {
+			> a {
+				color: $moss;
+				background: $white98;
+				box-shadow: $bdo-shadow-soft;
+			}
+		}
+
+		&.is-dropdown-submenu-parent > a {
+			padding: 1rem 2rem 1rem 1rem;
+			&::after {
+				// right: 0.8rem;
+				border: none;
+				font-family: 'bdo-glyphs' !important;
+				content: "\e905";
+				color: $ghost-moss;
+				font-size: 0.8rem;
+				position: absolute;
+				right: 1.6rem;
+				top: 50%;
+				margin-top: -0.25rem;
+				// Glyph Vertical Align Hack
+				line-height: 0.4;
+			}
+		}
+	}
+
+
+	// Second Level
+	ul.menu {
+		box-shadow: $bdo-shadow-harsh;
+		border-radius: $global-radius;
+		border: 0px;
+
+		li {
+			a {
+				color: $moss;
+				font-weight: 700;
+				font-size: 1.1rem;
+				padding: 1rem 1.2rem;
+				letter-spacing: $minus-tracking-x1;
+				white-space: nowrap;
+				&:hover {
+					background: $pale-mint;
+				}
+				&:active {
+					background: transparent;
+					background-image: $lime-grd-light;
+					color: $white98;
+				}
+	
+			}
+			&.is-active > a {
+				background: #D6EDE0;;
+			}			
+		}
+	}
+
+	// Opens Left Chevrons
+	.is-dropdown-submenu .is-dropdown-submenu-parent.opens-left > a::after {
+		border: none;
+		font-family: 'bdo-glyphs' !important;
+		content: "\e904";
+		color: $ghost-moss;
+		font-size: 0.8rem;
+	}
+
+	// Opens Right Chevrons
+	.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after {
+		border: none;
+		font-family: 'bdo-glyphs' !important;
+		content: "\e903";
+		color: $ghost-moss;
+		font-size: 0.8rem;
+	}
+
+	// Fix Opens-Righ Chevron Margin
+	.is-dropdown-submenu .is-dropdown-submenu-parent > a::after {
+		right: 1.5rem;
+	}
+}

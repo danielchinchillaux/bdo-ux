@@ -1,0 +1,27 @@
+.callout.bdo-announcement.lime-grd(data-closable="slide-out-up")
+	button.close-button(aria-label='Dismiss alert', type='button', data-close='')
+		span.white98(aria-hidden='true') ×
+
+	.announcement-container.grid-x.grid-margin-x.align-center.align-middle
+		.cell.announcement-title.small-12.medium-12.large-shrink
+			span Comunicado:
+		.cell.announcement-preview.small-12.medium-auto.large-shrink
+			p Nueva 
+				strong comisión por retiro en efectivo
+				|  en cajeros automáticos.
+		.cell.announcement-link.small-12.medium-shrink.large-shrink
+			button.button.bdo-white-btn(data-open="announcement-modal") Ver Aviso
+.reveal#announcement-modal.bdo-modal(data-reveal)
+	.cell.grid-y.grid-margin-y
+		.cell.modal-title
+			span.h3.strong.minus-tracking-x2 Comunicado
+		.cell.modal-content-block
+			p A partir del 
+				strong.leaf 13 de Agosto de 2019 
+				| la comisión por retiros en efectivo en cajeros automáticos será de 
+				strong.leaf L24.00 o el 5% de la transacción
+				| (el monto que resulte menor.)
+		.cell.modal-content-block
+			small Conforme a la circular #024/2018 de la Comisión Nacional de Bancos y Seguros, aplicable a partir del 4 de Noviembre de 2018.
+	button.close-button(data-close='', aria-label='Close modal', type='button')
+		span(aria-hidden='true') ×

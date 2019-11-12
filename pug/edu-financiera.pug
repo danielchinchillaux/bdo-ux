@@ -1,0 +1,109 @@
+include header.pug
+
+header.generic-hero-header.faux-grd.flex-container.align-middle
+	.cell
+		h1.title.h2 Educación Financiera
+	img.donut-deco(src="img/full-donut-lime.svg", alt="")
+
+section.filter-bar-wrapper.hide-for-large(data-sticky-container)
+	.cell.shrink.filter-bar-mob.grid-x.align-justify.sticky(data-sticky data-margin-top="0" data-top-anchor="feed-anchor:top" data-btm-anchor="billboard-anchor:bottom" data-sticky-on="small")
+		.cell.shrink
+			button.button.bdo-gray-btn.large(data-open="bdo-topics-filters-modal")
+				i.icon-levels-1.margin-r1x
+				| Filtros
+include blocks/topics-filters-modal.pug
+
+section.grid-x.grid-padding-x.align-center.browse-feed
+	aside.cell.sidebar-filters.large-3.show-for-large
+		form
+			ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+				li.accordion-item.is-active(data-accordion-item)
+					a.accordion-title(href="#") Temas
+					.accordion-content(data-tab-content)
+						fieldset
+							ul
+								li
+									input#tema1.checkbox-large(type='checkbox' checked)
+									label(for='tema1') Compras (1)
+								li
+									input#tema2.checkbox-large(type='checkbox')
+									label(for='tema2') Ahorros (2)
+								li
+									input#tema3.checkbox-large(type='checkbox')
+									label(for='tema3') Tarjetas (4)
+								li
+									input#tema4.checkbox-large(type='checkbox')
+									label(for='tema4') Préstamos (3)
+
+
+
+	section.grid-x.small-12.medium-12.large-auto.align-center#feed-anchor
+		.cell.cards-grid.grid-x.grid-margin-x.grid-margin-y
+			a.cell.bdo-card.blog-card(href="page.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.blog-cover
+						img(src="img/stocks/shop-online.jpg", alt="Comprando en Línea")
+					.cell.card-title-blog
+						h2 Compre con tranquilidad por internet: Consejos de seguridad en línea
+			
+			a.cell.bdo-card.blog-card(href="page.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.blog-cover
+						img(src="img/stocks/driver.jpg", alt="Conductor Sonriendo")
+					.cell.card-title-blog
+						h2 El préstamo correcto para el carro correcto: Tips para comprar vehículos
+			
+			a.cell.bdo-card.blog-card(href="page.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.blog-cover
+						img(src="img/stocks/shopping.jpg", alt="Mujer Sonriendo Compras")
+					.cell.card-title-blog
+						h2 5 Fáciles Consejos para evitar deudas con su tarjeta de crédito
+			a.cell.bdo-card.blog-card(href="page.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.blog-cover
+						img(src="img/stocks/macaw1.jpeg", alt="Comprando en Línea")
+					.cell.card-title-blog
+						h2 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+			
+			a.cell.bdo-card.blog-card(href="page.html").small-12.medium-6.large-4
+				article.grid-x
+					figure.cell.blog-cover
+						img(src="img/stocks/valle.jpg", alt="")
+					.cell.card-title-blog
+						h2 Lorem Ipsum Dolor Sit Amet? Consecuter Elipsim Ravenna
+			
+			
+
+		.cell
+			nav(aria-label='Pagination')
+				ul.pagination.text-center
+					li.pagination-previous.disabled
+						span.show-for-sr Página
+						| Anterior 
+						
+					li.current
+						span.show-for-sr Usted está en la página
+						|  1
+					li
+						a(href='#', aria-label='Página 2') 2
+					li
+						a(href='#', aria-label='Página 3') 3
+					li.ellipsis(aria-hidden='true')
+					li
+						a(href='#', aria-label='Página 13') 6
+					li.pagination-next
+						a(href='#', aria-label='Siguiente página')
+							| Siguiente 
+							span.show-for-sr página
+
+
+section.billboard.flex-container.align-middle#billboard-anchor
+	.billboard-cover
+		img(src="img/stocks/beach.jpg", alt="Vacaciones en la playa")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Sus vacaciones son inolvidables, nuestras promos también
+		a.button.bdo-orange-btn.large(href="page.html" title="Ver Promociones") Ver Promociones
+		
+
+include footer.pug

@@ -1,0 +1,84 @@
+include header.pug
+
+
+article
+	header.photo-hero-header.grid-x.align-center.align-middle
+		img.hero-cover(src="img/stocks/driving.jpg", alt="Conduciendo Vehículo")
+		.cell.hero-content
+			nav(aria-label="Usted está aquí:" role="navigation")
+				ul.breadcrumbs.show-for-medium
+					li: a Inicio
+					li Banca Personal
+					li: a Préstamos
+					li.current  Préstamo para Vehículos
+			h1 Préstamo para Vehículos
+			p.lead Es un crédito orientado a la adquisición de vehículos nuevos para uso familiar o trabajo, de acuerdo a la capacidad de pago y coberturas de garantía.
+
+	section.content-highlights.lime-grd-light.flex-container.align-center.align-middle
+		.grid-x.grid-margin-x.grid-margin-y
+			.cell.facts-column.small-12.medium-12.large-7
+				h2.title: strong Calcula tu cuota en base a tus ingresos
+				ul.special-facts.grid-x.grid-padding-y
+					li.cell.shrink.flex-container.flex-dir-column.align-right
+						span.caps-label Desde
+						span.key-value 12%
+						span.caps-label Interés
+					li.cell.shrink.flex-container.flex-dir-column.text-center.align-right
+						span.caps-label Hasta
+						span.key-value 6
+						span.caps-label Años
+					li.cell.shrink.flex-container.flex-dir-column.text-center.align-right
+						span.key-value 10%
+						span.caps-label Prima
+					
+			.cell.card-column.small-12.medium-12.large-5.flex-container.flex-dir-col.align-middle
+				a.cell.bdo-card.hz-icon-card.grid-x.small-6(href="vehicular-s1.html").height-160
+					span.card-tag.sunset-grd Nueva
+					.card-title-overlay.cell.small-8.flex-container.align-bottom
+						h3.card-title Calculadora de Cuotas
+					.hz-icon-overlay.cell.small-4.flex-container.align-middle
+						img(src="img/icons/calculadora.svg", alt="Calculadora")
+
+
+	section.content-block
+		.content-container
+			h2 Características y Requisitos de Apertura
+			ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+				li.accordion-item(data-accordion-item)
+					a.accordion-title(href="#") 
+						| Préstamo en Lempiras
+					.accordion-content(data-tab-content)
+						ul.bdo-ul-counter
+							li 12% de Interés
+							li Hasta 72 Meses Plazo
+							li Prima mínima de 10%
+							li Comisión por Otorgamiento gratis.
+							li Seguro de vehículo para su mejor beneficio, amortizable mensualmente en las cuotas del crédito.
+							li Sistema de monitoreo vía GPS incluido
+							li Crédito a garantizarse con prenda sobre el vehículo a adquirir.
+
+			ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true" data-deep-link="true")
+				li.accordion-item(data-accordion-item)
+					a.accordion-title(href="#") 
+						| Préstamo en Dólares
+					.accordion-content(data-tab-content)
+						ul.bdo-ul-counter
+							li 9% de Interés
+							li Hasta 60 Meses Plazo
+							li Prima mínima de 10%
+							li Comisión por Otorgamiento gratis.
+							li Seguro de vehículo para su mejor beneficio, amortizable mensualmente en las cuotas del crédito.
+							li Sistema de monitoreo vía GPS incluido
+							li Crédito a garantizarse con prenda sobre el vehículo a adquirir.
+
+
+include blocks/related-posts-edu.pug
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/valle.jpg", alt="Valle")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Apoyando al pequeño de hoy, hacemos el grande del mañana.
+		a.button.bdo-orange-btn.large(href="page.html" title="Conozca Nuestra Historia") Nuestra Historia		
+
+include footer.pug

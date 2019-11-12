@@ -1,0 +1,433 @@
+// SASS Mixins
+@mixin bdo-card {
+	box-shadow: $bdo-shadow-soft;
+	border-radius: $global-radius;
+	background: $white98;
+}
+
+@mixin hover-up {
+	transition: 0.2s;
+	transform: translateY(-2px);
+}
+
+// Modular Styles
+.text-shadow {
+	text-shadow: $bdo-text-shadow;
+}
+.bdo-shadow {
+	box-shadow: $bdo-shadow-soft;
+	&:hover {
+		box-shadow: $bdo-shadow-harsh;
+	}
+}
+.bdo-radius {
+	border-radius: $global-radius;
+}
+
+
+
+// Background Colors
+
+.bg-white98 {
+	background: $white98;
+}
+
+.sunset-grd {
+	background-image: $sunset-grd;
+}
+
+.forest-grd {
+	background-image: $forest-grd;
+}
+
+.lime-grd {
+	background-image: $lime-grd;
+}
+
+.lime-grd-light {
+	background-image: $lime-grd-light;
+}
+
+.metal-grd {
+	background-image: $metal-grd;
+}
+
+.graphite-grd {
+	background-image: $graphite-grd;
+}
+
+.faux-grd {
+	background-image: $faux-grd;
+}
+
+.cherry-grd {
+	background-image: $cherry-grd;
+}
+// Color Classes
+
+.orange {
+	color: $orange;
+}
+
+.sun {
+	color: $sun;
+}
+
+.carrot {
+	color: $carrot;
+}
+
+.leaf {
+	color: $leaf;
+}
+
+.forest {
+	color: $forest;
+}
+
+.deep-leaf {
+	color: $deep-leaf;
+}
+
+.pale-mint {
+	color: $pale-mint;
+}
+
+.moss {
+	color: $moss;
+}
+.mid-moss {
+	color: $mid-moss;
+}
+
+.pale-moss {
+	color: $pale-moss;
+}
+
+
+.ghost-moss {
+	color: $ghost-moss;
+}
+
+.gray94 {
+	color: $gray94;
+}
+
+.gray90 {
+	color: $gray90;
+}
+
+.gray80 {
+	color: $gray80;
+}
+
+.gray70 {
+	color: $gray70;
+}
+
+.gray60 {
+	color: $gray60;
+}
+
+.gray40 {
+	color: $gray40;
+}
+
+.gray30 {
+	color: $gray30;
+}
+
+.white96 {
+	color: $white96;
+}
+
+.white98 {
+	color: $white98;
+}
+
+.cherry {
+	color: $cherry;
+}
+
+// Font Modifiers
+
+.strong {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.minus-tracking-x1 {
+	letter-spacing: $minus-tracking-x1;
+}
+
+.minus-tracking-x2 {
+	letter-spacing: $minus-tracking-x2;
+}
+
+.minus-tracking-x3 {
+	letter-spacing: $minus-tracking-x3;
+}
+
+.trunk-ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// Spacers
+
+.margin-l1x {
+	margin-left: 0.5rem;
+}
+
+.margin-l2x {
+	margin-left: 1rem;
+}
+
+.margin-l3x {
+	margin-left: 1.5rem;
+}
+
+.margin-r1x {
+	margin-right: 0.5rem;
+}
+
+.margin-r2x {
+	margin-right: 1rem;
+}
+
+.margin-r3x {
+	margin-right: 1.5rem;
+}
+
+.margin-t1x {
+	margin-top: 0.5rem;
+}
+
+.margin-t2x {
+	margin-top: 1rem;
+}
+
+.margin-t3x {
+	margin-top: 1.5rem;
+}
+
+.margin-t4x {
+	margin-top: 2rem;
+}
+
+.margin-b1x {
+	margin-bottom: 0.5rem;
+}
+
+.margin-b2x {
+	margin-bottom: 1rem;
+}
+
+.margin-b3x {
+	margin-bottom: 1.5rem;
+}
+
+.margin-b4x {
+	margin-bottom: 2rem;
+}
+
+// Padders
+
+.padding-l1x {
+	padding-left: 0.5rem;
+}
+
+
+.padding-l2x {
+	padding-left: 1rem;
+}
+
+.padding-l3x {
+	padding-left: 1.5rem;
+}
+
+.padding-r1x {
+	padding-right: 0.5rem;
+}
+
+.padding-r2x {
+	padding-right: 1rem;
+}
+
+.padding-r3x {
+	padding-right: 1.5rem;
+}
+
+.padding-t1x {
+	padding-top: 0.5rem;
+}
+
+.padding-t2x {
+	padding-top: 1rem;
+}
+
+.padding-t3x {
+	padding-top: 1.5rem;
+}
+
+.padding-b1x {
+	padding-bottom: 0.5rem;
+}
+
+.padding-b2x {
+	padding-bottom: 1rem;
+}
+
+.padding-b3x {
+	padding-bottom: 1.5rem;
+}
+
+// Container Widths Modifiers
+
+.width1280 {
+	width: $width1280;
+}
+
+.width1100 {
+	width: $width1100;
+}
+
+.width960 {
+	width: $width960;
+}
+
+.width840 {
+	width: $width840;
+}
+
+.width720 {
+	width: $width720;
+}
+
+// Card Width & Height Modifiers
+
+.width-240 {
+	width: 15rem !important;
+}
+
+.width-300 {
+	width: 18.75rem !important;
+}
+
+.width-360 {
+	width: 22.5rem !important;
+}
+
+.height-360 {
+	height: 22.5rem !important;
+}
+
+.height-320 {
+	height: 20rem;
+}
+
+.height-240 {
+	height: 15rem;
+}
+
+.height-160 {
+	height: 10rem;
+}
+
+.height-100 {
+	height: 6.250rem;
+}
+
+.margin-lr-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Scrollers
+
+.hz-scroller {
+	
+
+	@include breakpoint(medium down) {
+		overflow-x: auto ;
+		overflow-y: hidden;
+		flex-wrap: nowrap !important;
+		// width: auto;
+		-webkit-overflow-scrolling: touch;
+	   }
+		
+		&::-webkit-scrollbar {
+			display: none;
+		  }
+
+	.card {
+    	// display: inline-block;
+	}
+	
+}
+
+
+
+.donut-deco {
+	margin-top: 2rem;
+}
+
+// Hacks
+
+.top-fix {
+	position: relative;
+	top: -0.2rem;
+}
+
+// Animations
+.hover-up {
+	transition: 0.2s;
+	&:hover {
+		@include hover-up;
+	}
+	
+}
+
+.swipe-me {
+	animation: animationFrames bezier 3s;
+	animation-iteration-count: infinite;
+	transform-origin: 50% 50%;
+	-webkit-animation: animationFrames linear 4s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: 50% 50%;
+	-moz-animation: animationFrames linear 4s;
+	-moz-animation-iteration-count: infinite;
+	-moz-transform-origin: 50% 50%;
+	-o-animation: animationFrames linear 4s;
+	-o-animation-iteration-count: infinite;
+	-o-transform-origin: 50% 50%;
+	-ms-animation: animationFrames linear 4s;
+	-ms-animation-iteration-count: infinite;
+	-ms-transform-origin: 50% 50%;
+  }
+  
+  @keyframes animationFrames{
+	0% {
+	  transform:  translate(0px,0px)  ;
+	  opacity: 0;
+	}
+	6% {
+	  transform:  translate(-15px,0px)  ;
+	  opacity: 1;
+	}
+	15% {
+	  transform:  translate(15px,0px)  ;
+	}
+	26% {
+	  transform:  translate(0px,0)  ;
+	  opacity: 1;
+	}
+	100% {
+	  transform:  translate(0,0px)  ;
+	  opacity: 0;
+	}
+  }

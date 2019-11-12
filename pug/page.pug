@@ -1,0 +1,184 @@
+include header.pug
+
+
+article
+	header.photo-hero-header.grid-x.align-center.align-middle
+		img.hero-cover(src="img/stocks/macaw3.jpeg", alt="Guacamaya Azul")
+		.cell.hero-content
+			nav(aria-label="Usted está aquí:" role="navigation")
+				ul.breadcrumbs.show-for-medium
+					li: a Inicio
+					li Banca Personal
+					li: a Préstamos
+					li.current  Bancocci Auto
+			h1 Plantilla de Páginas Genéricas
+			p.lead Esta plantilla es utilizada para cada tema/artículo en específico.
+
+	section.content-block
+		.content-container
+			h2 Características y Requisitos de Apertura Heading Level 2
+			
+			p Durante los primeros diecinueve años de su vida operacional, la única oficina del Banco de Occidente S.A. que funcionaba era la de su sede, es decir la de Santa Rosa de Copán, aun cuando, por el conocimiento de la zona y las actividades agrícolas y ganaderas de todo el país, hacía operaciones crediticias en toda la zona occidental y en la costa norte.
+			ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+				li.accordion-item(data-accordion-item)
+					a.accordion-title(href="#") 
+						| Beneficios
+					.accordion-content(data-tab-content)
+						p Con su Tarjeta de Crédito Visa Clásica Regional usted podrá realizar sus compras y retiros en toda la Región Centroamericana (excepto Panamá), además podrá disfrutar de los beneficios y la seguridad que Banco de Occidente le ofrece.
+						ul.bdo-ul-counter
+							li Membresía gratis el primer año
+							li Tarjeta adicional gratis
+							li Cantidad de Dinero a Solicitar
+							li Todos sus consumos son cobrados en Lempiras.
+							li 
+								span.top(data-tooltip='', data-click-open='true', tabindex='2', title="Seguro que elimina sus deudas pendientes en caso de fallecimiento.") Seguro de saldo de deuda 
+								|  en caso de fallecimiento.
+							li 
+								strong Acceso a Programas de Lealtad: 
+								| Acumula 1 
+								span.top(data-tooltip='', data-click-open='true', tabindex='2', title="Es un programa de lealtad de Banco de Occidente que premia el uso de sus tarjetas mediante puntos. Puede canjear estos puntos por efectivo.") Maya Punto 
+								|  por cada dólar (o su equivalente en Lempiras) de consumo.
+
+			ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true" data-deep-link="true")
+				li.accordion-item(data-accordion-item)
+					a.accordion-title.is-active(href="#") 
+						| Requisitos para Tarjetas de Crédito Personales
+					.accordion-content(data-tab-content)
+						p Para obtener una tarjeta de crédito VISA debe presentar en agencia los siguientes documentos:
+						ol.bdo-ol-counter
+							li Tarjeta de Identidad Original
+							li Llenar 
+								a(href="#") Solicitud de Tarjeta de Crédito 
+									i.icon-download-2
+								|  completamente llena con la información personal del cliente
+							li 
+								span.top(data-tooltip='', data-click-open='true', tabindex='2', title="Es un documento que hace constar cuál es el sueldo, salario o ingresos que percibe una persona.") Constancia de ingresos
+								| , como base Salario Mínimo, en caso de comerciante individual presentar Estados Financieros del año en curso.
+							li Antigüedad mínima de laborar 1 año para la misma Empresa.
+
+							li Al menos 3
+								span.top(data-tooltip='', data-click-open='true', tabindex='2', title="Son personas que puedan verificar que sea real cierta información que usted provea al banco.") Referencias Personales
+							li Al menos 2 
+								span.top(data-tooltip='', data-click-open='true', tabindex='2', title="Son referencias que pueden ayudar a demostrar que pagas tus cuentas a tiempo. Las referencias de crédito pueden incluir a bancos, compañías de tarjetas de crédito, renta de autos, préstamos previos o cuentas de renta con propósito de compra.") Referencias Crediticias
+							li 
+								span.top(data-tooltip='', data-click-open='true', tabindex='2', title="El RTN es un documento que lo identifica a usted o su empresa ante la SAR (Servicio de Administración de Rentas).")
+									| RTN numérico
+								|  (si posee)
+
+			a.button.bdo-orange-btn.large(href="" title="Enviar Solicitud") Enviar Solicitud 
+				i.icon-paper-plane
+
+	section.content-block.bg-white98
+		.content-container
+			h3 ¿Busca Vehículos Usados? H3
+			p Banco de Occidente S.A. nació en 1951 en la ciudad de Santa Rosa de Copán, gracias a un grupo de ciudadanos futuristas, que visualizaron la necesidad de contar en la zona occidental de Honduras con una institución bancaria, que con su respaldo económico y financiero se convirtiera en un ente promotor del desarrollo económico y social de aquella rica y productora región del país y de Honduras en general.
+			figure
+				img(src="img/stocks/cars.jpg", alt="Vehículos en Venta")
+				figcaption.text-center 
+					| Para describir fotografías utilizamos la 
+					strong figcaption 
+					| tag. Las imágenes deben de estar wrapped utilizando la 
+					a(target="_blank" href="https://www.w3schools.com/tags/tag_figure.asp" title="HTML5 Figure Tag") Figure Tag
+			p Su expansión hacia otros lugares del país la inició hasta 1970 con la apertura de la sucursal de San Pedro Sula. Actualmente Banco de Occidente, tiene presencia en casi todos los departamentos del país, contando con 9 sucursales y 170 oficinas generando empleos y satisfaciendo necesidades bancarias de cada una de las comunidades en las cuales se ha establecido.
+			a.button.bdo-green-btn.large(href="" title="Enviar Solicitud") Ver Vehículos en Venta
+
+	section.content-block
+		.content-container
+			h4 Requisitos del servicio para comerciante individual (Heading 4)
+			p Aún cuando ha crecido su personal, ha actualizado su mobiliario y equipo, el Banco de Occidente, desea siempre conservar su espíritu de típica ciudad del interior de Honduras, es decir, un espíritu de colaboración, de servir, tanto a sus clientes y amigos, como a personas que no lo son y de colaboración al progreso de la comunidad, volviéndose por ello una fuerza promotora del desarrollo y progreso económico y social donde quiera que el banco llegue.
+			a.button.bdo-white-btn.large(href="" title="Ver Condiciones") Ver Condiciones
+			h5 Heading Level 5: Responsive Embeds
+			p Tenemos una red de servicios financieros integrales en todo el país, que nos permite en forma ágil y confiable ofrecer soluciones bancarias-financieras al mercado hondureño en su localidad.
+			.responsive-embed.widescreen
+				iframe(width='560', height='315', src='https://www.youtube.com/embed/H7Yrtb64auk', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+			
+	section.content-block
+		.content-container
+			h3 Responsive Tables
+			p Hay 2 alternativas principales para las tables en mobile. Stackable tables y sliding tables. Foundation habilita cualquiera de estos modos agregando .classes al table element.
+			.table-scroll
+				table.hover
+					thead
+						tr
+							th(style='width:900px;') Cobertura
+							th(width='250') Opción 1
+							th(width='250') Opción 2
+							th(width='250') Opción 3
+							th(width='250') Opción 4
+							th(width='250') Opción 5
+							th(width='250') Opción 6
+							th(width='250') Opción 7
+							th(width='250') Opción 8
+							th(width='250') Opción 9
+							
+					tbody
+						tr
+							td Muerte accidental o desmembramiento accidental
+							td L15,000
+							td L25,000
+							td L50,000
+							td L100,000
+							td L150,000
+							td NA
+							td NA
+							td NA
+							td NA
+						tr
+							td Reembolso de gastos médicos por accidente
+							td L3,000
+							td L5,000
+							td L10,000
+							td L15,000
+							td L20,000
+							td NA
+							td NA
+							td NA
+							td NA
+						tr
+							td Deducible por evento y por persona para la cobertura de reembolso de gastos médicos por accidente
+							td L150
+							td L300
+							td L300
+							td L300
+							td L300
+							td NA
+							td NA
+							td NA
+							td NA
+	section.content-block
+		.content-container
+			h4 Pagination
+			nav(aria-label='Pagination')
+				ul.pagination.text-center
+					li.pagination-previous.disabled
+						span.show-for-sr Página
+						| Anterior 
+						
+					li.current
+						span.show-for-sr Usted está en la página
+						|  1
+					li
+						a(href='#', aria-label='Page 2') 2
+					li
+						a(href='#', aria-label='Page 3') 3
+					li.ellipsis(aria-hidden='true')
+					li
+						a(href='#', aria-label='Page 13') 13
+					li.pagination-next
+						a(href='#', aria-label='Next page')
+							| Siguiente 
+							span.show-for-sr página
+
+include blocks/related-posts-edu.pug
+					
+	
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/shop-online.jpg", alt="Compras en Línea")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow ¿Compras por internet? Banco de Occidente le protege
+		a.button.bdo-orange-btn.large(href="#" title="Ver Educación Financiera") Ver Consejos
+		
+
+include footer.pug

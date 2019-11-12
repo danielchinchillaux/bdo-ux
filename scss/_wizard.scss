@@ -1,0 +1,343 @@
+.bdo-currency-widget {
+	.tabs-content {
+		padding: 1.5rem;
+	}
+}
+
+.wizard-wrapper {
+	padding: 6rem 5vw;
+	@include breakpoint (small only) {
+		padding: 0;
+	}
+}
+
+.wizard-container {
+	background: $white96;
+	border-radius: $global-radius;
+}
+
+.wizard-title {
+
+	h1 {
+		color: $white98;
+		letter-spacing: $minus-tracking-x1;
+		line-height: 1.2;
+		padding-right: 1.5rem;
+		font-weight: bold;
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-weight: normal;
+		font-size: 1.7rem;
+		padding-right: 1.5rem;
+		color: $white98;
+	}
+}
+
+.wizard-header {
+	background-image: $faux-grd;
+	padding: 2rem 2rem;
+	position: relative;
+	// margin-bottom: 3rem;
+
+	.wizard-controls {
+		.back-arrow.button.bdo-link-btn {
+			border-radius: 100px;
+			margin-bottom: 0;
+			i {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	.wizard-steps {
+		ul {
+			margin: 0 auto 2rem auto;
+			list-style: none;
+			width: auto;
+
+			.button.step {
+				border-radius: 100px;
+				padding: 0.4rem 0.55rem;
+				margin-bottom: 0;
+				font-weight: bold;
+				background: $pale-moss;
+				transition: 0.2s;
+
+				&:hover {
+					background: $leaf;
+					
+				}
+
+				&.done {
+					background: $forest;
+					&:hover {
+						background: $sun;
+						@include hover-up
+					}
+				}
+
+				&.current {
+					background-color: none;
+					background-image: $sunset-grd;
+					&:hover {
+						cursor: default;
+						transform: none;
+					}
+				}
+				&.disabled {
+					&:hover {
+						background: $gray60;
+					}
+				}
+
+
+			}
+		}
+	}
+
+	.section-title {
+		
+		h2,h3 {
+			font-weight: bold;
+			letter-spacing: $minus-tracking-x1;
+			margin-bottom: 2rem;
+		}
+	}
+
+}
+.wizard-bubble {
+	position: relative;
+}
+
+
+
+.bubble {
+	width: 6rem;
+	height: 6rem;
+	border-radius: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	margin: 0rem auto 0rem auto;
+	background: $white98;
+	box-shadow: $bdo-shadow-soft;
+	bottom: -5rem;
+	position: absolute;
+
+	i {
+		font-size: 2.7rem;
+		line-height: 2.2;
+	}
+	img {
+		max-height: 2.7rem;
+		width: auto;
+	}
+
+	&.lift-up {
+		bottom: -5rem;
+		position: absolute;
+	}
+}
+
+
+
+.wizard-block {
+	> p {
+		max-width: 30rem;
+		margin: 1rem auto;
+	}
+
+	&.padded {
+		padding: 1.5rem;
+	}
+
+	ul.accordion:last-of-type {
+		margin: 0	;
+	}
+}
+
+.wizard-header {
+	// margin-bottom: 2rem;
+}
+
+.wizard-footer {
+	margin-top: 3rem;
+}
+
+.wizard-callout {
+	padding: 2rem 1.5rem;
+	color: $white98;
+
+	&.bubble-padd {
+		padding-top: 4rem;
+	}
+}
+
+.wizard-amount-input {
+	label {
+		font-size: 1.2rem;
+		color: $pale-moss;
+		// color: $moss;
+		letter-spacing: $minus-tracking-x1;
+		font-weight: bold;
+		margin-bottom: 0.4rem;
+	}
+	.input-wrapper {
+		position: relative;
+
+		.currency {
+			position: absolute;
+			bottom: 1.05rem;
+			left: 1rem;
+			font-size: 1.5rem;
+			font-weight: 900;	
+		}
+
+		.operators {
+			position: absolute;
+			bottom: 0.6rem;
+			right: 1rem;
+
+			.operator-btn {
+				margin: 0 0 0 0rem;
+				padding: 0.5rem;
+				font-size: 1.7rem;
+				color: $mid-moss;
+				background: transparent;
+				border-radius: 100px;
+
+				&:hover, &:focus {
+					color: $leaf;
+					background: $white96;
+					cursor: pointer;
+				}
+
+				&.disabled {
+					&:hover {
+						color: $mid-moss;
+						cursor: not-allowed;
+					}
+				}
+			}
+		}
+
+
+	}
+	input[type="number"] {
+		border: none;
+		box-shadow: $bdo-shadow-soft;
+		font-size: 1.5rem;
+		font-weight: 900;
+		height: auto;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 2.5rem;
+		appearance: none;
+
+		&.error {
+			color: $cherry;
+			// border: 2px solid $cherry;
+		}
+
+		&:focus {
+			border: none;
+			box-shadow: $bdo-shadow-harsh;
+		}
+		
+		&::placeholder {
+			font-weight: 900;
+			// text-indent: 1.5rem;
+		}
+
+		&::-webkit-inner-spin-button, 
+		&::-webkit-outer-spin-button { 
+			-webkit-appearance: none; 
+			margin: 0; 
+		}
+	}
+}
+
+.wizard-switcher {
+	.year {
+		font-size: 1.5rem;
+		font-weight: 900;
+		display: block;
+		margin-bottom: 0.4rem;	
+	}
+
+	.term {
+		font-size: 0.8rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 0;
+	}
+}
+
+.wizard-results {
+	margin: 3rem 0 1rem 0;
+}
+
+.wizard-flag {
+	font-size: 1.1rem;
+	padding: 0.6rem 1.5rem;
+	color: $white98;
+}
+
+.wizard-label {
+	font-size: 1.2rem;
+	color: $pale-moss;
+	letter-spacing: $minus-tracking-x1;
+	font-weight: bold;
+	margin-bottom: 0.6rem;
+	display: block;
+}
+
+.wizard-summary {
+
+}
+
+.bubble-note {
+	margin-bottom: 2rem;
+	p {
+		font-size: 1.1rem;
+		color: $mid-moss;
+	}
+
+	.title {
+		font-size: 1.3rem;
+		margin: 0;
+		font-weight: bolder;
+		letter-spacing: $minus-tracking-x1;
+	}
+}
+
+.icon-bubble {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 200px;
+	background: $white98;
+	text-align: center;
+	width: 6rem;
+	height: 6rem;
+
+	
+
+	i {
+		font-size: 3rem;
+	}
+}
+
+form.leads-form {
+	label {
+		font-size: 1.2rem;
+	}
+
+	input {
+		font-size: 1.2rem;
+		font-weight: bold;
+
+	}
+}

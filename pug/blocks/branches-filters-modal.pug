@@ -1,0 +1,43 @@
+.reveal#bdo-branches-filters-modal.bdo-modal.filters(data-reveal data-animation-in="slide-in-down fade-out")
+	.cell.grid-y.grid-margin-y
+		.cell.modal-title.text-center
+			span.h3.strong.minus-tracking-x2 
+				strong Filtrar por:
+
+		.cell.modal-content-block.text-center
+			form.bdo.filters-modal
+				.cell.select-icon-hack
+					i.icon-map-pin.ghost-moss.before
+					i.icon-chevron-down.ghost-moss.after
+					select#region-dropdown(name='region').region-dropdown
+						option(value='') Comayagua (14)
+						option(value='Atlantida') Atlántida (8)
+						option(value='Choluteca') Choluteca (9)
+						option(value='Cortes') Cortés (17)
+						option(value='Colon') Colón (10)
+						option(value='Comayagua') Comayagua (14)
+						option(value='ElParaiso') El Paraíso (6)
+						option(value='FranciscoMorazan') Francisco Morazán (24)
+						option(value='...') ... (11)
+				.cell
+					ul.accordion.text-left(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+						li.accordion-item.is-active(data-accordion-item)
+							a.accordion-title(href="#") Tipo
+							.accordion-content(data-tab-content)
+								fieldset
+									ul
+										li
+											input#btype1.checkbox-large(type='checkbox')
+											label(for='btype1') Agencias (6)
+										li
+											input#btype2.checkbox-large(type='checkbox')
+											label(for='btype2') Autobancos (2)
+										li
+											input#btype3.checkbox-large(type='checkbox')
+											label(for='btype3') Cajeros ATM (4)
+				.cell
+					button.button.bdo-green-btn.large.expanded Aplicar
+		
+			
+	button.close-button(data-close='', aria-label='Close modal', type='button')
+		span(aria-hidden='true') ×

@@ -1,0 +1,61 @@
+.bdo-currency-widget.grid-x
+	.cell.widget-controls.grid-x
+		.cell.currency-selector.shrink
+			.button-group.bdo
+				button.button.large.bdo-white-btn.is-green-active $
+				button.button.large.bdo-white-btn €
+		.cell.operator-selector.auto
+			ul.tabs.bdo-switcher-tabs.classic-tabs.grid-x.align-center(data-tabs)#currency-widget-switcher
+				li.tabs-title.cell.small-4
+					a(href="#exchange-1" data-tabs-target="exchange-1") Tasa
+				li.tabs-title.is-active.cell.small-8
+					a(href="#converter-2" aria-selected="true" ) Convertidor
+	
+	.cell.menus-content.tabs-content.bdo(data-tabs-content="currency-widget-switcher")
+		.tabs-panel#exchange-1
+			.cell.currency-content.grid-x.align-middle
+				.cell.currency-block.grid-y.auto
+					.cell.title.shrink.trunk-ellipsis
+						span.caps-label Venta
+					.cell.price.shrink.trunk-ellipsis
+						span.forest
+							strong L 
+							strong 24.72
+							span 09
+					.cell.trend
+						span.pale-moss
+							i.icon-arrow-up.margin-r1x
+							| 0.1429
+				.cell.currency-block.grid-y.auto
+					.cell.title.shrink.trunk-ellipsis
+						span.caps-label Compra
+					.cell.price.shrink.trunk-ellipsis
+						span.forest
+							strong L 
+							strong 24.59
+							span 46
+					.cell.trend
+						span.pale-moss
+							i.icon-arrow-up.margin-r1x
+							| 0.2078
+				.cell.graph-trigger.shrink
+					button.button.has-tip.bottom(data-open="bdo-currency-graph" data-tooltip='', tabindex='2', title='Historial del Precio del Dólar/Euro')
+						i.icon-trend
+
+		.tabs-panel.is-active#converter-2
+			form.bdo.currency-converter.grid-x.align-center.align-middle
+				//- .cell.form-block.margin-b1x
+				//- 	span.caps-label.forest Dólares a Lempiras
+				//- 	button.button.bdo-ghost-btn.circle
+				//- 		i.icon-transfer-9.strong
+					
+				.cell.form-block.currency-amount-wrapper.small-5
+					span.currency-input-indicator $
+					input.gray-inpt(type="number" placeholder="5420" inputmode="numeric" id="currency-amount" step="10")
+				.cell.currency-converter-toggle.small-2.text-center
+					button.button.bdo-ghost-btn.circle
+						i.icon-transfer-9.strong
+				.cell.converter-result.small-5.flex-container.align-middle.align-center
+					span.ghost-moss.padding-r1x L
+					span.moss 123,456.78
+			

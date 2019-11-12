@@ -1,0 +1,82 @@
+footer.bdo-global-footer
+	.footer-container.grid-x.grid-margin-y
+		.cell.social-and-apps.grid-x.align-justify.align-middle
+			.cell.social-media.small-12.medium-12.large-shrink.text-center
+				ul.cell.grid-x.align-center
+					li.shrink: a(href="#" title="Facebook") 
+						i.icon-facebook
+					li.shrink: a(href="#" title="Messenger") 
+						i.icon-messenger
+					li.shrink: a(href="#" title="Whatsapp") 
+						i.icon-whatsapp
+					li.shrink: a(href="#" title="Twitter") 
+						i.icon-twitter
+					li.shrink: a(href="#" title="Instagram") 
+						i.icon-instagram
+					li.shrink: a(href="#" title="Youtube") 
+						i.icon-youtube
+
+			.cell.download-apps.small-12.medium-12.large-shrink.grid-x.text-center
+				ul.cell.grid-x.grid-margin-y.align-center
+					li.cell.shrink: a.hover-up(href="#" title="Descargar en Google Play" target="_blank")
+						img(src="img/google-play.png", alt="Descargar en Google Play")
+					li.cell.shrink: a.hover-up(href="#" title="Descargar en la App Store" target="_blank")
+						img(src="img/app-store.png", alt="Descargar en la App Store")
+		.cell.logo-and-shortcuts.grid-x.grid-margin-y.grid-padding-y.align-middle.align-justify
+			.cell.footer-logo.small-12.medium-12.large-shrink
+				a.hover-up(href="index.html" title="Banco de Occidente SA")
+					img(src="img/bdo-logo-color.svg", alt="Logo Banco de Occidente SA Honduras")
+
+			.cell.small-12.medium-12.large-8.grid-x.grid-margin-x.grid-margin-y
+				.cell.small-12.medium-6
+					a.cell.bdo-card.hz-icon-card.grid-x(href="agencias.html").height-100
+						.card-title-overlay.cell.small-8.flex-container.align-bottom
+							h3.card-title Agencias y Horarios
+						.hz-icon-overlay.cell.small-4.flex-container.align-middle
+							img(src="img/icons/map-pin.svg", alt="Mapa Pin")
+					
+				.cell.small-12.medium-6
+					a.cell.bdo-card.hz-icon-card.grid-x(data-open="bdo-call").height-100
+						.card-title-overlay.cell.small-8.flex-container.align-bottom
+							h3.card-title Call Center
+						.hz-icon-overlay.cell.small-4.flex-container.align-middle
+							img(src="img/icons/call-bubble.svg", alt="Call Center")
+						
+				
+					
+
+			
+		
+		nav.cell.footer-links.grid-x.grid-padding-x.grid-margin-y
+			.cell.small-12.medium-shrink.links-column
+				h5 Nuestro Banco
+				ul
+					li: a(href="agencias.html") Agencias y Horarios
+					li: a(href="#") Historia
+					li: a(href="#") Misión y Visión
+					li: a(href="#") Valores
+					li: a(href="#") Objetivos
+			.cell.small-12.medium-shrink.links-column
+				h5 Corporativo
+				ul
+					li: a(href="#") Contratos
+					li: a(href="#") Tarifario
+			.cell.small-12.medium-shrink.links-column
+				h5 Finanzas y Legal
+				ul
+					li: a(href="#") Estados Financieros
+					li: a(href="#") Atención al Usuario Financiero
+					li: a(href="#") Gestión Integral de Riesgos
+					li: a(href="#") CNBS
+		.cell.copyrights
+			span.pale-moss Banco de Occidente SA © 2019
+
+include blocks/banking-login.pug
+include blocks/currency-graph.pug
+include blocks/call-modal.pug
+
+
+script(src='node_modules/jquery/dist/jquery.js')
+script(src='node_modules/what-input/dist/what-input.js')
+script(src='node_modules/foundation-sites/dist/js/foundation.js')
+script(src='js/app.js')

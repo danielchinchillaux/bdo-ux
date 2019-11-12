@@ -1,0 +1,71 @@
+include ../header.pug
+
+
+section.wizard-wrapper.lime-grd-light.grid-x
+	.cell.large-4.show-for-large.wizard-title
+		h1.h2.strong.text-right Calculadora de Cuotas:
+		h2.h3.strong.text-right Préstamo para Vehículos
+	.cell.small-12.medium-12.large-8.wizard-container.grid-x
+		.cell.wizard-header.grid-x
+			.cell.wizard-controls
+				a.back-arrow.button.bdo-link-btn(href="javascript:history.back()")
+					i.icon-arro-left
+			.cell.wizard-steps.grid-x
+				ul.cell.shrink.grid-x.grid-margin-x
+					li.cell.shrink: a.button.step.done(href="vehicular-s1.html") 1
+					li.cell.shrink: a.button.step.done(href="vehicular-s2.html") 2
+					li.cell.shrink: a.button.step.done(href="vehicular-s3.html") 3
+					li.cell.shrink: a.button.step.current(href="vehicular-s4.html") 4
+					li.cell.shrink: a.button.step.disabled(href="vehicular-s5.html") 5
+			
+			.cell.section-title
+				h2.text-center ¿Qué sigue?
+				.cell.wizard-bubble.flex-container.align-center
+					.bubble.lift-up
+						i.icon-double-check.orange
+			
+		.cell.wizard-block.wizard-callout.padded.bubble-padd.text-center.sunset-grd
+			p.strong Para aprobar su préstamo necesitamos:
+
+		.cell.wizard-block.padded.grid-x.align-center.margin-t3x
+			.bubble-note.cell.small-12.medium-8.grid-x.align-middle
+				.cell.shrink
+					.icon-bubble
+						i.icon-credit-history.leaf
+				.cell.auto.padding-l3x
+					span.title ¿Tiene deudas?
+					p Si usted es un buen pagador tiene más probablilidades tiene de ser aceptado.
+			
+			.bubble-note.cell.small-12.medium-8.grid-x.align-middle
+				.cell.shrink
+					.icon-bubble
+						i.icon-grants.leaf
+				.cell.auto.padding-l3x
+					span.title Garantías de Pago
+					p Como avales o propiedades que pueda ofrecer como hipoteca en caso de incumplimiento.
+			
+			.bubble-note.cell.small-12.medium-8.grid-x.align-middle
+				.cell.shrink
+					.icon-bubble
+						i.icon-assessment.leaf
+				.cell.auto.padding-l3x
+					span.title Asesoría Financiera
+					p Banco de Occidente le protege y asesora su experiencia financiera.
+
+
+		.cell.wizard-block.padded.flex-container.align-center
+			a.button.bdo-green-btn.wizard-action(href="vehicular-s5.html")
+				i.icon-arrow-right
+
+		include ../blocks/need-help-wizard.pug
+
+
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/valle.jpg", alt="Valle")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Apoyando al pequeño de hoy, hacemos el grande del mañana.
+		a.button.bdo-orange-btn.large(href="page.html" title="Conozca Nuestra Historia") Nuestra Historia		
+
+include ../footer.pug

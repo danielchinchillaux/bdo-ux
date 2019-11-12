@@ -1,0 +1,126 @@
+include ../header.pug
+
+
+section.wizard-wrapper.lime-grd-light.grid-x
+	.cell.large-4.show-for-large.wizard-title
+		h1.h2.strong.text-right Calculadora de Cuotas:
+		h2.h3.strong.text-right Préstamo Vehicular
+	.cell.small-12.medium-12.large-8.wizard-container.grid-x
+		.cell.wizard-header.grid-x
+			.cell.wizard-controls
+				a.back-arrow.button.bdo-link-btn(href="javascript:history.back()")
+					i.icon-arro-left
+			.cell.wizard-steps.grid-x
+				ul.cell.shrink.grid-x.grid-margin-x
+					li.cell.shrink: a.button.step.done(href="vehicular-s1.html") 1
+					li.cell.shrink: a.button.step.done(href="vehicular-s2.html") 2
+					li.cell.shrink: a.button.step.current(href="vehicular-s3.html") 3
+					li.cell.shrink: a.button.step.disabled(href="vehicular-s4.html") 4
+					li.cell.shrink: a.button.step.disabled(href="vehicular-s5.html") 5
+			
+			.cell.section-title
+				h2.text-center Calcula tu Cuota
+				.cell.wizard-bubble.flex-container.align-center
+					.bubble.lift-up
+						i.icon-coin-stack.leaf
+
+
+		.cell.wizard-block.wizard-results.padded.grid-x.grid-padding-x.align-center
+			.cell.small-12.medium-8.grid-x
+				.cell.fee.auto
+					span.key-value.leaf.strong L9,240.91
+					span.key-label.forest Cuota Mensual
+				.cell.interest.small-3.text-right
+					span.key-value.moss.strong 12%
+					span.key-label.pale-moss Interés
+				.cell.downpayment.small-3.text-right
+					span.key-value.moss.strong 10%
+					span.key-label.pale-moss Prima
+		
+		.cell.wizard-flag.lime-grd 
+			strong
+				i.icon-check-circle.margin-r1x
+				| Posible Aceptación
+
+		.cell.wizard-block.padded.grid-x.align-center.margin-t3x
+			.cell.small-12.medium-8.grid-x
+				.cell
+					span.wizard-label ¿En cuántos años desea pagarlo?		
+				.cell.shrink
+					.button-group.wizard-switcher
+						button.button.bdo-white-btn.large.text-center
+							span.year 2
+							span.term Años
+					
+						button.button.bdo-white-btn.large.text-center
+							span.year 3
+							span.term Años
+						
+						button.button.bdo-white-btn.large.text-center
+							span.year 4
+							span.term Años
+						
+						button.button.bdo-white-btn.large.text-center.is-green-active
+							span.year 5
+							span.term Años
+						
+						button.button.bdo-white-btn.large.text-center
+							span.year 6
+							span.term Años
+
+
+		.cell.wizard-block.padded.grid-x.align-center
+			.cell.wizard-amount-input.small-12.medium-8
+				label(for="amount") Valor del Vehículo
+				.input-wrapper
+					.currency
+						span.ghost-moss L
+					.operators
+						button.button.operator-btn
+							i.icon-minus
+						button.button.operator-btn
+							i.icon-plus
+
+					input(type="number" step="1000" inputmode="numeric" placeholder="0" id="amount" value="520000")
+			
+		.cell.wizard-block.padded.grid-x.align-center
+			.cell.wizard-amount-input.small-12.medium-8
+				label(for="income") Prima (10%)
+				.input-wrapper
+					.currency
+						span.ghost-moss L
+					.operators
+						button.button.operator-btn.disabled
+							i.icon-minus
+						button.button.operator-btn
+							i.icon-plus
+
+					input.error(type="number" step="1000" inputmode="numeric" placeholder="0" id="income" value="52000")
+				span.field-error.cherry.strong 
+					i.icon-alert-octagon.margin-r1x
+					| La prima no puede ser menor al 10%.
+		
+
+		
+		.cell.wizard-block.wizard-callout.lime-grd.grid-x.align-center
+			.cell.small-12.medium-8
+				h4.strong
+					i.icon-check-circle.margin-r1x
+					| Posible Aceptación
+				p.margin-t2x Con sus ingresos actuales más un buen record crediticio usted podría calificar para este préstamo.
+
+		.cell.wizard-block.padded.flex-container.align-center
+			a.button.bdo-green-btn.wizard-action(href="vehicular-s4.html")
+				i.icon-arrow-right
+
+		include ../blocks/need-help-wizard.pug
+
+
+section.billboard.flex-container.align-middle
+	.billboard-cover
+		img(src="img/stocks/valle.jpg", alt="Valle")
+	.billboard-overlay
+		h3.billboard-title.h2.text-shadow Apoyando al pequeño de hoy, hacemos el grande del mañana.
+		a.button.bdo-orange-btn.large(href="page.html" title="Conozca Nuestra Historia") Nuestra Historia		
+
+include ../footer.pug

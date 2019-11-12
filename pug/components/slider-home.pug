@@ -1,0 +1,43 @@
+.orbit.bdo.home-slider(role='region', aria-label='Home Slider', data-orbit='', data-auto-play="false", data-swipe="true")
+	.orbit-wrapper
+		//- .orbit-controls
+		//- 	button.orbit-previous
+		//- 		span.show-for-sr Atrás
+		//- 		i.icon-chevron-left
+		//- 	button.orbit-next
+		//- 		span.show-for-sr Siguiente
+		//- 		i.icon-chevron-right
+		ul.orbit-container
+			li.is-active.orbit-slide.bdo
+				img.orbit-bg(src='img/stocks/slide2.jpg', alt='Space')
+				.slide-content.flex-container.flex-dir-column.align-center.align-middle.grid-x.grid-padding-y
+					.cell
+						h2.text-shadow ¡Nuevo! Calcula tu cuota de préstamos en base a tus ingresos.
+					.cell
+						p.slide-lead.hide-for-small Prueba nuestra nueva calculadora de cuotas, fácil y rápido.
+					.cell
+						a.button.bdo-orange-btn.large Ver Calculadora
+
+			li.orbit-slide.bdo
+				img.orbit-bg(src='img/stocks/valle.jpg', alt='Space')
+				.slide-content.flex-container.flex-dir-column.align-center.align-middle.grid-x.grid-padding-y
+					.cell
+						h2 Apoyando al pequeño de hoy hacemos el grande del mañana.
+					.cell
+						p.slide-lead Consecuter Elipsim et ravenna mana
+					.cell
+						a.button.bdo-orange-btn.large(href="#") Et Ravenna
+			
+			li.orbit-slide.bdo
+				img.orbit-bg(src='img/stocks/macaw2.jpeg', alt='Space')
+				.slide-content.flex-container.flex-dir-column.align-center.align-middle.grid-x.grid-padding-y
+					.cell
+						h2 Gracias por 68 años de confianza.
+						//- p.slide-lead Consecuter Elipsim et ravenna mana
+					.cell
+						a.button.bdo-orange-btn.large(href="#") Lorem Ipsum
+
+	nav.orbit-bullets.bdo
+		button.is-active(data-slide='0')
+		button(data-slide='1')
+		button(data-slide='2')
