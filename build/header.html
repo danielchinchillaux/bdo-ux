@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Banco de Occidente SA">
+    <meta name="keywords" content="Keywords">
+    <title>BDO UI | v1.0</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="icon" type="image/png" href="img/android-chrome-512x512.png" sizes="512x512">
+    <link rel="icon" type="image/png" href="img/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="img/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+  <body>
+    <main>
+      <div class="callout bdo-announcement lime-grd" data-closable="slide-out-up">
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close=""><span class="white98" aria-hidden="true">×</span></button>
+        <div class="announcement-container grid-x grid-margin-x align-center align-middle">
+          <div class="cell announcement-title small-12 medium-12 large-shrink"><span>Comunicado:</span></div>
+          <div class="cell announcement-preview small-12 medium-auto large-shrink">
+            <p>Nueva <strong>comisión por retiro en efectivo</strong> en cajeros automáticos.</p>
+          </div>
+          <div class="cell announcement-link small-12 medium-shrink large-shrink">
+            <button class="button bdo-white-btn" data-open="announcement-modal">Ver Aviso</button>
+          </div>
+        </div>
+      </div>
+      <div class="reveal bdo-modal" id="announcement-modal" data-reveal>
+        <div class="cell grid-y grid-margin-y">
+          <div class="cell modal-title"><span class="h3 strong minus-tracking-x2">Comunicado</span></div>
+          <div class="cell modal-content-block">
+            <p>A partir del <strong class="leaf">13 de Agosto de 2019 </strong>la comisión por retiros en efectivo en cajeros automáticos será de <strong class="leaf">L24.00 o el 5% de la transacción</strong>(el monto que resulte menor.)</p>
+          </div>
+          <div class="cell modal-content-block"><small>Conforme a la circular #024/2018 de la Comisión Nacional de Bancos y Seguros, aplicable a partir del 4 de Noviembre de 2018.</small></div>
+        </div>
+        <button class="close-button" data-close="" aria-label="Close modal" type="button"><span aria-hidden="true">×</span></button>
+      </div>
+      <nav class="hide-for-large grid-y" id="bdo-nav-mob">
+        <div class="cell online-banking-bar"><a class="button bdo-orange-btn expanded text-left" data-open="banking-login"> <i class="icon-bdo-icon margin-r1x"></i><span>Banca Digital</span><i class="icon-chevron-right"></i></a></div>
+        <div class="cell mobile-nav-bar grid-x align-middle">
+          <div class="cell auto align-middle"><a class="mobile-nav-logo" href="home.html"><img src="img/bdo-isologo-color.svg" alt="Isotipo Banco de Occidente SA Honduras"></a></div>
+          <div class="cell shrink align-middle grid-x grid-padding-x">
+            <div class="cell shrink"><a class="mobile-nav-btn" href="agencias.html"><i class="icon-pin"></i></a></div>
+            <div class="cell shrink"><a class="mobile-nav-btn" data-open="bdo-call"><i class="icon-call"></i></a></div>
+            <div class="cell shrink margin-l2x"><a class="mobile-nav-btn" data-open="bdo-modal-menu"><i class="icon-list-4 margin-r2x"></i><span class="icon-label">Menú</span></a></div>
+          </div>
+        </div>
+      </nav>
+      <div class="reveal" id="bdo-modal-menu" data-reveal data-animation-in="slide-in-up fade-out" data-v-offset="16">
+        <button class="close-button" data-close="" aria-label="Close modal" type="button"><span aria-hidden="true">×</span></button>
+        <div class="cell grid-y grid-margin-y">
+          <div class="cell align-center flex-container align-center align-middle"><a class="logo-modal-menu margin-t3x" href="home.html"><img src="img/bdo-logo-color.svg" alt="Logo Banco de Occidente SA Honduras"></a></div>
+          <div class="cell switcher shrink flex-container align-center">
+            <ul class="tabs bdo-switcher-tabs grid-x" data-tabs id="modal-menu-switcher">
+              <li class="tabs-title is-active cell shrink"><a href="#personas-modal-1" aria-selected="true">Personas</a></li>
+              <li class="tabs-title cell shrink"><a class="active-sunset" href="#empresas-modal-2" data-tabs-target="empresas-modal-2">Empresas</a></li>
+            </ul>
+          </div>
+          <div class="cell modal-menus-wrapper tabs-content bdo" data-tabs-content="modal-menu-switcher">
+            <div class="tabs-panel is-active" id="personas-modal-1">
+              <div class="cell grid-y align-center margin-lr-auto">
+                <ul class="modal-nav-list vertical menu drilldown bdo" data-drilldown data-auto-focus="true" data-scroll-top="true"> 
+                  <li class="modal-nav-item"><a href="#">Tasa de Cambio</a>
+                    <ul class="menu vertical nested">
+                      <li>
+                        <div class="bdo-currency-widget grid-x">
+                          <div class="cell widget-controls grid-x">
+                            <div class="cell currency-selector shrink">
+                              <div class="button-group bdo">
+                                <button class="button large bdo-white-btn is-green-active">$</button>
+                                <button class="button large bdo-white-btn">€</button>
+                              </div>
+                            </div>
+                            <div class="cell operator-selector auto">
+                              <ul class="tabs bdo-switcher-tabs classic-tabs grid-x align-center" data-tabs id="currency-widget-switcher-mob-modal">
+                                <li class="tabs-title cell small-4"><a href="#exchange-1-mob-modal" data-tabs-target="exchange-1-mob-modal">Tasa</a></li>
+                                <li class="tabs-title is-active cell small-8"><a href="#converter-2-mob-modal" aria-selected="true">Convertidor</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="cell menus-content tabs-content bdo" data-tabs-content="currency-widget-switcher-mob-modal">
+                            <div class="tabs-panel" id="exchange-1-mob-modal">
+                              <div class="cell currency-content grid-x align-middle">
+                                <div class="cell currency-block grid-y auto">
+                                  <div class="cell title shrink trunk-ellipsis"><span class="caps-label">Venta</span></div>
+                                  <div class="cell price shrink trunk-ellipsis"><span class="forest"><strong>L </strong><strong>24.72</strong><span>09</span></span></div>
+                                  <div class="cell trend"><span class="pale-moss"><i class="icon-arrow-up margin-r1x"></i>0.1429</span></div>
+                                </div>
+                                <div class="cell currency-block grid-y auto">
+                                  <div class="cell title shrink trunk-ellipsis"><span class="caps-label">Compra</span></div>
+                                  <div class="cell price shrink trunk-ellipsis"><span class="forest"><strong>L </strong><strong>24.59</strong><span>46</span></span></div>
+                                  <div class="cell trend"><span class="pale-moss"><i class="icon-arrow-up margin-r1x"></i>0.2078</span></div>
+                                </div>
+                                <div class="cell graph-trigger shrink">
+                                  <button class="button has-tip bottom" data-open="bdo-currency-graph" data-tooltip="" tabindex="2" title="Historial del Precio del Dólar/Euro"><i class="icon-trend"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tabs-panel is-active" id="converter-2-mob-modal">
+                              <form class="bdo currency-converter grid-x align-center align-middle">
+                                <div class="cell form-block currency-amount-wrapper small-5"><span class="currency-input-indicator">$</span>
+                                  <input class="gray-inpt" type="number" placeholder="5420" inputmode="numeric" id="currency-amount" step="10">
+                                </div>
+                                <div class="cell currency-converter-toggle small-2 text-center">
+                                  <button class="button bdo-ghost-btn circle"><i class="icon-transfer-9 strong"></i></button>
+                                </div>
+                                <div class="cell converter-result small-5 flex-container align-middle align-center"><span class="ghost-moss padding-r1x">L</span><span class="moss">123,456.78</span></div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="modal-nav-item"><a href="">Cuentas</a>
+                    <ul class="menu vertical nested">
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Ahorro</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Cheques</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Cipotes</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Juvenil</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Depósitos a Plazo</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                    </ul>
+                  </li>
+                  <li class="modal-nav-item"><a href="">Préstamos</a>
+                    <ul class="menu vertical nested">
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Préstamo para Vehículos</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Préstamo para Vivienda</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Préstamo Personal</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Préstamo Agrícola</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                    </ul>
+                  </li>
+                  <li class="modal-nav-item"><a href="">Tarjetas</a>
+                    <ul class="menu vertical nested">
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Promociones</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Débito</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Crédito</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Recargable</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Seguro de Tarjetas</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                    </ul>
+                  </li>
+                  <li class="modal-nav-item"><a href="">Seguros</a>
+                    <ul class="menu vertical nested">
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Vida</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Accidentes</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                      <li><a class="cell bdo-card photo-card height-160" href="#">
+                          <div class="card-title-overlay">
+                            <h4 class="card-title">Tarjetas</h4>
+                          </div>
+                          <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                    </ul>
+                  </li>
+                  <li class="modal-nav-item"><a href="">Pagos</a>
+                    <ul class="menu vertical nested">
+                      <li><a href="#">Servicios Públicos</a></li>
+                      <li><a href="#">Matrícula Vehicular</a></li>
+                      <li><a href="#">Cita para Pasaporte</a></li>
+                      <li><a href="#">Impuestos</a></li>
+                      <li><a href="#">Otros Servicios</a></li>
+                    </ul>
+                  </li>
+                  <li class="modal-nav-item"><a href="">En Venta</a>
+                    <ul class="menu vertical nested">
+                      <li><a href="#">Vehículos</a></li>
+                      <li><a href="#">Casas</a></li>
+                      <li><a href="#">Terrenos</a></li>
+                      <li><a href="#">Locales</a></li>
+                      <li><a href="#">Edificios</a></li>
+                      <li><a href="#">Otros</a></li>
+                    </ul>
+                  </li>
+                  <li class="modal-nav-item"><a href="">Más</a>
+                    <ul class="menu vertical nested">
+                      <li><a href="#">Educación Financiera</a></li>
+                      <li><a href="#">App y Banca Digital</a></li>
+                      <li><a href="#">Transferencias Nacionales</a></li>
+                      <li><a href="#">Internacional</a>
+                        <ul class="menu vertical nested">
+                          <li><a href="#">Compra y Venta de Divisas</a></li>
+                          <li><a href="#">Emisión de Cheques</a></li>
+                          <li><a href="#">Transferencias Internacionales</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Otros</a>
+                        <ul class="menu vertical nested">
+                          <li><a href="#">Cajas de Seguridad</a></li>
+                          <li><a href="#">Remesas</a></li>
+                          <li><a href="#">Fideicomisos</a></li>
+                          <li><a href="#">Pólizas</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="bdo-title-divider icon-only flex-container align-middle padding-t1x"><img class="donut-deco" src="img/full-donut-lime.svg" alt=""></div>
+                  </li>
+                  <li class="modal-nav-item"><a href="">Nuestro Banco</a>
+                    <ul class="menu vertical nested">
+                      <li><a href="#">Historia</a></li>
+                      <li><a href="#">Misión y Visión</a></li>
+                      <li><a href="#">Valores</a></li>
+                      <li><a href="#">Valores</a></li>
+                      <li><a href="#">Objetivos</a></li>
+                      <li><a href="#">Valores</a></li>
+                      <li><a href="#">Contratos</a></li>
+                    </ul>
+                  </li>
+                  <li class="modal-nav-item"><a href="">Finanzas y Legal</a>
+                    <ul class="menu vertical nested">
+                      <li><a href="#">Estados Financieros</a></li>
+                      <li><a href="#">Atención al Usuario Financiero</a></li>
+                      <li><a href="#">Tarifario</a></li>
+                      <li><a href="#">Gestión Integral de Riesgos</a></li>
+                      <li><a href="#">CNBS</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tabs-panel" id="empresas-modal-2">
+              <ul class="modal-nav-list vertical menu drilldown bdo" data-drilldown data-auto-focus="true" data-scroll-top="true">
+                <li class="modal-nav-item"><a href="">Cuentas</a>
+                  <ul class="menu vertical nested">
+                    <li><a class="cell bdo-card photo-card height-160" href="#">
+                        <div class="card-title-overlay">
+                          <h4 class="card-title">Ahorro</h4>
+                        </div>
+                        <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                    <li><a class="cell bdo-card photo-card height-160" href="#">
+                        <div class="card-title-overlay">
+                          <h4 class="card-title">Cheques</h4>
+                        </div>
+                        <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                  </ul>
+                </li>
+                <li class="modal-nav-item"><a href="">Préstamos</a>
+                  <ul class="menu vertical nested">
+                    <li><a class="cell bdo-card photo-card height-160" href="#">
+                        <div class="card-title-overlay">
+                          <h4 class="card-title">Comercial</h4>
+                        </div>
+                        <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                    <li><a class="cell bdo-card photo-card height-160" href="#">
+                        <div class="card-title-overlay">
+                          <h4 class="card-title">Agrícola</h4>
+                        </div>
+                        <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                  </ul>
+                </li>
+                <li class="modal-nav-item"><a href="">Tarjetas</a>
+                  <ul class="menu vertical nested">
+                    <li><a class="cell bdo-card photo-card height-160" href="#">
+                        <div class="card-title-overlay">
+                          <h4 class="card-title">Crédito Empresarial</h4>
+                        </div>
+                        <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                    <li><a class="cell bdo-card photo-card height-160" href="#">
+                        <div class="card-title-overlay">
+                          <h4 class="card-title">Débito Empresarial</h4>
+                        </div>
+                        <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                    <li><a class="cell bdo-card photo-card height-160" href="#">
+                        <div class="card-title-overlay">
+                          <h4 class="card-title">Seguro Tarjetas</h4>
+                        </div>
+                        <div class="card-poster"><img src="img/stocks/generic-thumb.jpg" alt=""></div></a></li>
+                  </ul>
+                </li>
+                <li class="modal-nav-item"><a href="">Pagos y Cobros</a>
+                  <ul class="menu vertical nested">
+                    <li><a href="#">Pagos</a>
+                      <ul class="menu vertical nested">
+                        <li><a href="#">Impuestos</a></li>
+                        <li><a href="#">Servicios Públicos</a></li>
+                        <li><a href="#">Matrícula Vehicular</a></li>
+                        <li><a href="#">Otros Servicios</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Cobros</a>
+                      <ul class="menu vertical nested">
+                        <li><a href="#">POS</a></li>
+                        <li><a href="#">Servicio de Cobranzas</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="modal-nav-item"><a href="">En Venta</a>
+                  <ul class="menu vertical nested">
+                    <li><a href="#">Vehículos</a></li>
+                    <li><a href="#">Casas</a></li>
+                    <li><a href="#">Terrenos</a></li>
+                    <li><a href="#">Locales</a></li>
+                    <li><a href="#">Edificios</a></li>
+                    <li><a href="#">Otros</a></li>
+                  </ul>
+                </li>
+                <li class="modal-nav-item"><a href="">Más</a>
+                  <ul class="menu vertical nested">
+                    <li><a href="#">Educación Financiera</a></li>
+                    <li><a href="#">App y Banca Digital</a></li>
+                    <li><a href="#">Transferencias Nacionales</a></li>
+                    <li><a href="#">Internacional</a>
+                      <ul class="menu vertical nested">
+                        <li><a href="#">Compra y Venta de Divisas</a></li>
+                        <li><a href="#">Emisión de Cheques</a></li>
+                        <li><a href="#">Transferencias Internacionales</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Fideicomisos</a>
+                      <ul class="menu vertical nested">
+                        <li><a href="#">Fideicomisos</a></li>
+                        <li><a href="#">Informes de Proyectos</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Otros</a>
+                      <ul class="menu vertical nested">
+                        <li><a href="#">Cajas de Seguridad</a></li>
+                        <li><a href="#">Remesas</a></li>
+                        <li><a href="#">Fideicomisos</a></li>
+                        <li><a href="#">Pólizas</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="bdo-title-divider icon-only flex-container align-middle padding-t1x"><img class="donut-deco" src="img/full-donut-sunset.svg" alt=""></div>
+                </li>
+                <li class="modal-nav-item"><a href="">Nuestro Banco</a>
+                  <ul class="menu vertical nested">
+                    <li><a href="#">Historia</a></li>
+                    <li><a href="#">Misión y Visión</a></li>
+                    <li><a href="#">Valores</a></li>
+                    <li><a href="#">Valores</a></li>
+                    <li><a href="#">Objetivos</a></li>
+                    <li><a href="#">Valores</a></li>
+                    <li><a href="#">Contratos</a></li>
+                  </ul>
+                </li>
+                <li class="modal-nav-item"><a href="">Finanzas y Legal</a>
+                  <ul class="menu vertical nested">
+                    <li><a href="#">Estados Financieros</a></li>
+                    <li><a href="#">Atención al Usuario Financiero</a></li>
+                    <li><a href="#">Tarifario</a></li>
+                    <li><a href="#">Gestión Integral de Riesgos</a></li>
+                    <li><a href="#">CNBS</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="grid-x grid-margin-y show-for-large" id="bdo-nav-dsk">
+        <div class="cell upper-nav grid-x grid-padding-x align-middle">
+          <div class="cell bdo-logo-dsk shrink"><a href="home.html"><img src="img/bdo-logo-color.svg" alt="Logo Banco de Occidente SA Honduras"></a></div>
+          <div class="cell currency-header grid-x auto align-middle align-center">
+            <div class="cell switcher shrink">
+              <ul class="tabs bdo-switcher-tabs grid-x" data-tabs id="currency-switcher-dsk">
+                <li class="tabs-title is-active cell shrink"><a href="#dollar-panel-1" aria-selected="true">$</a></li>
+                <li class="tabs-title cell shrink"><a href="#euro-panel-2" data-tabs-target="euro-panel-2" aria-selected="true">€</a></li>
+              </ul>
+            </div>
+            <div class="cell currency-content tabs-content bdo auto" data-tabs-content="currency-switcher-dsk">
+              <div class="tabs-panel is-active" id="dollar-panel-1">
+                <div class="cell grid-x">
+                  <div class="cell currency-block grid-y auto">
+                    <div class="cell title shrink trunk-ellipsis"><span class="caps-label">Venta</span></div>
+                    <div class="cell price shrink trunk-ellipsis"><span class="forest"><strong>L </strong><strong>24.72</strong><span>09</span></span></div>
+                    <div class="cell trend"><span class="pale-moss"><i class="icon-arrow-up margin-r1x"></i>0.1429</span></div>
+                  </div>
+                  <div class="cell currency-block grid-y auto">
+                    <div class="cell title shrink trunk-ellipsis"><span class="caps-label">Compra</span></div>
+                    <div class="cell price shrink trunk-ellipsis"><span class="forest"><strong>L </strong><strong>24.59</strong><span>46</span></span></div>
+                    <div class="cell trend"><span class="pale-moss"><i class="icon-arrow-up margin-r1x"></i>0.2078</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-panel" id="euro-panel-2">
+                <div class="cell grid-x">
+                  <div class="cell currency-block grid-y auto">
+                    <div class="cell title shrink trunk-ellipsis"><span class="caps-label">Venta</span></div>
+                    <div class="cell price shrink trunk-ellipsis"><span class="forest"><strong>L </strong><strong>28.70</strong><span>09</span></span></div>
+                    <div class="cell trend trunk-ellipsis"><span class="pale-moss"><i class="icon-arrow-down margin-r1x"></i>0.4401</span></div>
+                  </div>
+                  <div class="cell currency-block grid-y auto">
+                    <div class="cell title shrink trunk-ellipsis"><span class="caps-label">Compra</span></div>
+                    <div class="cell price shrink trunk-ellipsis"><span class="forest"><strong>L </strong><strong>26.98</strong><span>13</span></span></div>
+                    <div class="cell trend trunk-ellipsis"><span class="pale-moss"><i class="icon-arrow-down margin-r1x"></i>0.0242</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell graph-trigger shrink">
+              <button class="button has-tip bottom" data-open="bdo-currency-graph" data-tooltip="" tabindex="2" title="Historial del Precio del Dólar/Euro"><i class="icon-trend"></i></button>
+            </div>
+          </div>
+          <div class="cell top-header-links grid-x align-middle align-right shrink">
+            <div class="cell shrink"><a class="button bdo-link-btn" href="agencias.html"><i class="icon-map-pin ghost-moss margin-r1x"></i><span>Agencias</span></a></div>
+            <div class="cell shrink"><a class="button bdo-link-btn" data-open="bdo-call"><i class="icon-call-bubble ghost-moss margin-r1x"></i><span>Call Center</span></a></div>
+            <div class="cell shrink margin-l2x"><a class="button bdo-orange-btn" data-open="banking-login" id="bdo-login-btn-dsk"><i class="icon-bdo-icon margin-r1x"></i><span>Banca Digital</span></a></div>
+          </div>
+        </div>
+        <div class="cell lower-nav grid-x align-center">
+          <nav class="grid-x align-middle" id="lower-nav-dsk">
+            <div class="nav-switcher cell shrink">
+              <ul class="tabs bdo-switcher-tabs grid-x" data-tabs id="menu-switcher-dsk">
+                <li class="tabs-title is-active cell shrink"><a href="#menu-personas-1" aria-selected="true">Personas</a></li>
+                <li class="tabs-title cell shrink"><a class="active-sunset" href="#menu-empresas-2" data-tabs-target="menu-empresas-2" aria-selected="true">Empresas</a></li>
+              </ul>
+            </div>
+            <div class="cell menus-content tabs-content bdo shrink" data-tabs-content="menu-switcher-dsk">
+              <div class="tabs-panel is-active" id="menu-personas-1">
+                <div class="nav-lists cell auto">
+                  <ul class="dropdown menu" data-dropdown-menu data-click-open="true">
+                    <li><a>Cuentas</a>
+                      <ul class="menu">
+                        <li><a>Ahorro</a></li>
+                        <li><a>Cheques</a></li>
+                        <li><a>Cipotes</a></li>
+                        <li><a>Juvenil</a></li>
+                        <li><a>Depósitos a Plazo</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="product-landing.html">Préstamos</a>
+                      <ul class="menu">
+                        <li><a href="product-landing.html">Vehicular</a></li>
+                        <li><a href="product-landing.html">Vivienda</a></li>
+                        <li><a href="product-landing.html">Personal</a></li>
+                        <li><a href="product-landing.html">Agrícola</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Tarjetas</a>
+                      <ul class="menu">
+                        <li><a>Promociones</a></li>
+                        <li><a>Crédito</a></li>
+                        <li><a>Débito</a></li>
+                        <li><a>Recargable</a></li>
+                        <li><a>Seguro Tarjetas</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Seguros</a>
+                      <ul class="menu">
+                        <li><a>Vida</a></li>
+                        <li><a>Accidentes</a></li>
+                        <li><a>Tarjetas</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Pagos</a>
+                      <ul class="menu">
+                        <li><a>Servicios Públicos</a></li>
+                        <li><a>Matrícula Vehicular</a></li>
+                        <li><a>Cita para Pasaporte</a></li>
+                        <li><a>Impuestos</a></li>
+                        <li><a>Otros Servicios</a></li>
+                      </ul>
+                    </li>
+                    <li><a>En Venta</a>
+                      <ul class="menu">
+                        <li><a href="propiedades-feed.html">Vehículos</a></li>
+                        <li><a href="propiedades-feed.html">Casas</a></li>
+                        <li><a href="propiedades-feed.html">Terrenos</a></li>
+                        <li><a href="propiedades-feed.html">Locales</a></li>
+                        <li><a href="propiedades-feed.html">Edificios</a></li>
+                        <li><a href="propiedades-feed.html">Otros</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Más</a>
+                      <ul class="menu">
+                        <li><a href="edu-financiera.html">Educación Financiera</a></li>
+                        <li><a>App y Banca Digital</a></li>
+                        <li><a>Transferencias Nacionales</a></li>
+                        <li><a>Internacional</a>
+                          <ul class="menu">
+                            <li><a>Compra Venta de Divisas</a></li>
+                            <li><a>Emisión de Cheques </a></li>
+                            <li><a>Transferencias Internacionales </a></li>
+                          </ul>
+                        </li>
+                        <li><a>Otros</a>
+                          <ul class="menu">
+                            <li><a>Cajas de Seguridad</a></li>
+                            <li><a>Remesas</a></li>
+                            <li><a>Fideicomisos</a></li>
+                            <li><a>Pólizas</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tabs-panel" id="menu-empresas-2">
+                <div class="nav-lists cell auto">
+                  <ul class="dropdown menu" data-dropdown-menu data-click-open="true">
+                    <li><a>Cuentas</a>
+                      <ul class="menu">
+                        <li><a>Ahorro</a></li>
+                        <li><a>Cheques</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Préstamos</a>
+                      <ul class="menu">
+                        <li><a href="product-landing-empresas.html">Comercial</a></li>
+                        <li><a href="product-landing-empresas.html">Agrícola</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Tarjetas</a>
+                      <ul class="menu">
+                        <li><a>Crédito Empresarial</a></li>
+                        <li><a>Débito Empresarial</a></li>
+                        <li><a>Seguro Tarjetas</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Pagos y Cobros</a>
+                      <ul class="menu">
+                        <li> <a>Pagos</a>
+                          <ul class="menu">
+                            <li><a>Impuestos</a></li>
+                            <li><a>Servicios Públicos</a></li>
+                            <li><a>Matrícula Vehicular</a></li>
+                            <li><a>Otros Servicios</a></li>
+                          </ul>
+                        </li>
+                        <li><a>Cobros</a>
+                          <ul class="menu">
+                            <li><a>POS</a></li>
+                            <li><a>Servicio de Cobranzas</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a>En Venta</a>
+                      <ul class="menu">
+                        <li><a href="propiedades-feed.html">Vehículos</a></li>
+                        <li><a href="propiedades-feed.html">Casas</a></li>
+                        <li><a href="propiedades-feed.html">Terrenos</a></li>
+                        <li><a href="propiedades-feed.html">Locales</a></li>
+                        <li><a href="propiedades-feed.html">Edificios</a></li>
+                        <li><a href="propiedades-feed.html">Otros</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Más</a>
+                      <ul class="menu">
+                        <li><a href="edu-financiera.html">Educación Financiera</a></li>
+                        <li><a>App y Banca Digital</a></li>
+                        <li><a>Transferencias Nacionales</a></li>
+                        <li><a>Internacional</a>
+                          <ul class="menu">
+                            <li><a>Compra Venta de Divisas</a></li>
+                            <li><a>Cartas de Crédito</a></li>
+                            <li><a>Transferencias Internacionales </a></li>
+                          </ul>
+                        </li>
+                        <li><a>Fideicomisos</a>
+                          <ul class="menu">
+                            <li><a>Fideicomisos</a></li>
+                            <li><a>Informes de Proyectos</a></li>
+                          </ul>
+                        </li>
+                        <li><a>Garantías Bancarias</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </nav>
+    </main>
+  </body>
+</html>
