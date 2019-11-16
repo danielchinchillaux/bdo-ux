@@ -7,7 +7,7 @@
 		"uuidString": "DE966439-7B35-4775-92EE-5DD537AD69A7"
 		}
 	],
-"creatorBuild": "31927",
+"creatorBuild": "31934",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -39,40 +39,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/generic-page.html",
-		"oF": 0
-		},
-	"/glyphs/bdo-glyphs.eot": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/glyphs/bdo-glyphs.eot",
-		"oF": 0
-		},
-	"/glyphs/bdo-glyphs.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/build/glyphs/bdo-glyphs.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/glyphs/bdo-glyphs.ttf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/glyphs/bdo-glyphs.ttf",
-		"oF": 0
-		},
-	"/glyphs/bdo-glyphs.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/glyphs/bdo-glyphs.woff",
 		"oF": 0
 		},
 	"/header.html": {
@@ -831,6 +797,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/scss/_glyphs_bkp.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/scss/_glyphs_bkp.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/scss/_helpers.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -917,8 +896,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/scss/app.css",
-		"oF": 0,
+		"oAP": "/build/css/app.css",
+		"oF": 2,
 		"oS": 0,
 		"uL": 1
 		},
@@ -2896,7 +2875,6 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"enableJavascript": 0,
-		"ieCompatibility": 0,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
